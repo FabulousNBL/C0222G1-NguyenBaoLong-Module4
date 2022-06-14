@@ -10,16 +10,18 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class ExchangeController {
-    @Autowired private Exchange exchange;
+    @Autowired
+    private Exchange exchange;
+
     @GetMapping("/change")
-    public String home(){
+    public String home() {
         return "/home";
     }
 
     @PostMapping("/change")
-    public String exchange(@RequestParam(name = "usd") String usd, Model model){
-        model.addAttribute("total",exchange.exchange(usd));
-        model.addAttribute("usd",usd);
+    public String exchange(@RequestParam(name = "usd") String usd, Model model) {
+        model.addAttribute("total", exchange.exchange(usd));
+        model.addAttribute("usd", usd);
         return "/home";
     }
 }

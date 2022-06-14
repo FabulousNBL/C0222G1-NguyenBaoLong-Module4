@@ -20,38 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="910e0783-3f3f-4d7b-8419-f31b92a517af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../../C0222G1 - NguyenBaoLong - Module 4.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dictionary/controller/DictionaryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dictionary/service/Dictionary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dictionary/service/DictionaryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exchange-money/src/main/java/exchange/controller/ExchangeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exchange-money/src/main/java/exchange/service/Exchange.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exchange-money/src/main/java/exchange/service/ExchangeImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exchange-money/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exchange-money/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exchange-money/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exchange-money/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/customer/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/customer/.idea/customer.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/customer/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/customer/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/customer/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/customer/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/customer/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/greeting/src/main/java/com/example/controller/GreetingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/greeting/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/greeting/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/greeting/src/main/webapp/WEB-INF/views/greeting.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/greeting/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exchange-money/src/main/java/exchange/controller/ExchangeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exchange-money/src/main/java/exchange/controller/ExchangeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exchange-money/src/main/java/exchange/service/ExchangeImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exchange-money/src/main/java/exchange/service/ExchangeImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exchange-money/src/main/webapp/WEB-INF/views/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../exchange-money/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../practice/customer/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/customer/customer-management" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,7 +228,7 @@
       <option name="presentableId" value="Default" />
       <updated>1655178134796</updated>
       <workItem from="1655178142188" duration="3717000" />
-      <workItem from="1655188013465" duration="4214000" />
+      <workItem from="1655188013465" duration="4280000" />
     </task>
     <servers />
   </component>
