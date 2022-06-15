@@ -1,0 +1,28 @@
+package sandwich.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.Arrays;
+
+@Controller
+public class SandwichController {
+
+    @GetMapping
+    public String home() {
+        return "index";
+    }
+
+    @PostMapping("/spice")
+    public String select(@RequestParam("spicy") String[] spicy,
+                         Model model) {
+
+        model.addAttribute("result", Arrays.toString(spicy));
+
+        return "result";
+    }
+
+}
