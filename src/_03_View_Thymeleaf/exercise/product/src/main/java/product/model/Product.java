@@ -1,11 +1,26 @@
 package product.model;
 
+import org.hibernate.annotations.ColumnDefault;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "product")
 public class Product {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(name = "name", columnDefinition = "varchar(200)")
     private String name;
+    @Column(name = "price", columnDefinition = "Double")
     private double price;
+    @Column(name = "description", columnDefinition = "varchar(200)")
     private String description;
+    @Column(name = "producer", columnDefinition = "varchar(200)")
     private String producer;
+    @Column(name = "status", columnDefinition = "bit")
+    @ColumnDefault("0")
+    private int status;
 
     public Product() {
     }
@@ -56,5 +71,13 @@ public class Product {
 
     public void setProducer(String producer) {
         this.producer = producer;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
     }
 }

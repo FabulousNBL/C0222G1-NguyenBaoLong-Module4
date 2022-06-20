@@ -20,43 +20,58 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0ef94a9-e2c6-465f-9934-2857955a17d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/product/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/product/model/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/product/service/IProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/product/service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/customer-management/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/customer-management/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/customer-management/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/customer-management/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/customer-management/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/customer-management/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/customer-management/src/main/java/customer/controller/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/customer-management/src/main/java/customer/model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/customer-management/src/main/java/customer/service/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/customer-management/src/main/java/customer/service/ICustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/customer-management/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/customer-management/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/customer-management/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/customer-management/src/main/webapp/WEB-INF/views/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/customer-management/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/customer-management/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/customer-management/src/main/webapp/WEB-INF/views/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/customer-management/src/main/webapp/WEB-INF/views/view.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/customer-management/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.conf.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/mp3/.idea/modules/mp3.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/mp3/src/main/java/mp3/controller/Mp3Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/mp3/src/main/java/mp3/model/Mp3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/mp3/src/main/java/mp3/repository/IMp3Repository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/mp3/src/main/java/mp3/repository/impl/BaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/mp3/src/main/java/mp3/repository/impl/Mp3Repository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/mp3/src/main/java/mp3/service/IMp3Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/mp3/src/main/java/mp3/service/impl/Mp3Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/mp3/src/main/resources/hibernate.conf.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/mp3/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/mp3/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/mp3/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/mp3/src/main/webapp/WEB-INF/views/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/mp3/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/mp3/src/main/webapp/WEB-INF/views/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/mp3/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/product/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/product/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/product/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/product/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/product/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/product/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/product/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/product/src/main/java/product/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/product/src/main/java/product/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/product/src/main/java/product/repository/IProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/product/src/main/java/product/repository/impl/BaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/product/src/main/java/product/repository/impl/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/product/src/main/java/product/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/product/src/main/java/product/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/product/src/main/resources/hibernate.conf.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/product/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/product/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/product/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/product/src/main/webapp/WEB-INF/views/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/product/src/main/webapp/WEB-INF/views/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/product/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/product/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/product/src/main/webapp/WEB-INF/views/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/exercise/product/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/practice/.idea/modules/demo.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/practice/src/main/java/customer/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/practice/src/main/java/customer/service/impl/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/practice/src/main/java/customer/service/impl/SimpleCustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/practice/src/main/resources/hibernate.conf.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/practice/src/main/webapp/WEB-INF/views/info.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_05_ORM/practice/src/main/webapp/WEB-INF/views/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../_01_SpringMVC/practice/customer/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_01_SpringMVC/practice/customer/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/product/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/product/model/Product.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,9 +86,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -98,20 +113,27 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\C0222G1 - NguyenBaoLong - Module 4\src\_03_View_Thymeleaf\exercise\product\src\main\resources" />
+      <recent name="D:\C0222G1 - NguyenBaoLong - Module 4\src\_03_View_Thymeleaf\exercise\iphone\src\main\webapp\WEB-INF" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="product.repository" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\C0222G1 - NguyenBaoLong - Module 4\src\_03_View_Thymeleaf\exercise\iphone\src\main\webapp\WEB-INF\views" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\C0222G1 - NguyenBaoLong - Module 4\src\_03_View_Thymeleaf\exercise\iphone\src\main\webapp\WEB-INF" />
     </key>
   </component>
   <component name="RunManager">
@@ -200,6 +222,11 @@
       <updated>1655448484500</updated>
       <workItem from="1655448489569" duration="11374000" />
       <workItem from="1655460923552" duration="85000" />
+      <workItem from="1655688703184" duration="51000" />
+      <workItem from="1655695851982" duration="75000" />
+      <workItem from="1655698454487" duration="1943000" />
+      <workItem from="1655706778301" duration="8594000" />
+      <workItem from="1655731708130" duration="681000" />
     </task>
     <servers />
   </component>
@@ -219,18 +246,22 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="163" y="0" key="#Project_Structure" timestamp="1655695877693">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="163" y="0" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1655695877693" />
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1655449304155">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1655449304155" />
-    <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser" timestamp="1655456952238">
+    <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser" timestamp="1655717523704">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1655456952238" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1655457006107">
+    <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1655717523704" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1655695931023">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1655457006107" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1655695931023" />
     <state width="905" height="150" key="GridCell.Tab.0.bottom" timestamp="1655460845614">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -279,5 +310,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="905" height="150" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1655460845615" />
+    <state x="65" y="0" key="new project wizard" timestamp="1655717749550">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1655717749550" />
   </component>
 </project>
