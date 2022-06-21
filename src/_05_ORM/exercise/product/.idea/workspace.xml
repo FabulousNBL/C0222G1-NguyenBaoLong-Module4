@@ -20,58 +20,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4404bf1-96ce-411d-9d1e-081c910816f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../_03_View_Thymeleaf/exercise/product/src/main/resources/hibernate.conf.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mp3/.idea/modules/mp3.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mp3/src/main/java/mp3/controller/Mp3Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mp3/src/main/java/mp3/model/Mp3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mp3/src/main/java/mp3/repository/IMp3Repository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mp3/src/main/java/mp3/repository/impl/BaseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mp3/src/main/java/mp3/repository/impl/Mp3Repository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mp3/src/main/java/mp3/service/IMp3Service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mp3/src/main/java/mp3/service/impl/Mp3Service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mp3/src/main/resources/hibernate.conf.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mp3/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mp3/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mp3/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mp3/src/main/webapp/WEB-INF/views/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mp3/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mp3/src/main/webapp/WEB-INF/views/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mp3/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/product/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/product/model/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/product/repository/IProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/product/repository/impl/BaseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/product/repository/impl/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/product/service/IProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/product/service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.conf.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/.idea/modules/demo.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/src/main/java/customer/model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/src/main/java/customer/service/impl/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/src/main/java/customer/service/impl/SimpleCustomerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/src/main/resources/hibernate.conf.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/src/main/webapp/WEB-INF/views/info.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/src/main/webapp/WEB-INF/views/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/src/main/java/blog/controller/BlogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/src/main/java/blog/model/Blog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/src/main/java/blog/model/BlogDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/src/main/java/blog/model/BlogDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/src/main/java/blog/repository/IBlogDetailRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/src/main/java/blog/repository/IBlogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/src/main/java/blog/service/ApplicationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/src/main/java/blog/service/IBlogDetailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/src/main/java/blog/service/IBlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/src/main/java/blog/service/impl/BlogDetailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/src/main/java/blog/service/impl/BlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/src/main/webapp/WEB-INF/views/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/src/main/webapp/WEB-INF/views/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/src/main/webapp/WEB-INF/views/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../_01_SpringMVC/practice/customer/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_01_SpringMVC/practice/customer/customer-management" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_03_View_Thymeleaf/exercise/product/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_03_View_Thymeleaf/exercise/product/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_03_View_Thymeleaf/exercise/product/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_03_View_Thymeleaf/exercise/product/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_03_View_Thymeleaf/exercise/product/src/main/java/product/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_03_View_Thymeleaf/exercise/product/src/main/java/product/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/product/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/product/model/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/product-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/product-1.0-SNAPSHOT.war" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,6 +198,11 @@
       <updated>1655718599329</updated>
       <workItem from="1655718604036" duration="2117000" />
       <workItem from="1655729319027" duration="3440000" />
+      <workItem from="1655784792441" duration="3816000" />
+      <workItem from="1655792883503" duration="314000" />
+      <workItem from="1655796450095" duration="1641000" />
+      <workItem from="1655799768315" duration="2859000" />
+      <workItem from="1655817416814" duration="466000" />
     </task>
     <servers />
   </component>
