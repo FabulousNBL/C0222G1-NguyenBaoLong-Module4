@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+</head>
+<body>
+<h3>Product</h3>
+<p>
+    <a th:href="@{/create}">
+        Add new product
+    </a>
+</p>
+
+<form action="/search">
+    <label>
+        <input type="text" name="title">
+    </label>
+    <button type="submit">Tìm kiếm</button>
+</form>
+<form action="/brief">
+    <label>
+        <button type="submit"> Tóm tắt </button>
+    </label>
+</form>
+<table id="blog">
+    <thead>
+    <tr>
+        <th>STT</th>
+        <th>Id</th>
+        <th>Thể loại</th>
+        <th>Tiêu đề</th>
+        <th>Ngày viết</th>
+        <th>Edit</th>
+        <th>Delete</th>
+        <th>Detail</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="blog,varStat : ${blogList}">
+        <td th:text="${varStat.count}"></td>
+        <td th:text="${blog.id}"></td>
+        <td th:text="${blog.category.type}"></td>
+        <td th:text="${blog.title}"></td>
+        <td th:text="${blog.createDay}"></td>
+        <td><a th:href="@{/{id}/edit(id=${blog.getId()})}">Update</a></td>
+        <td><a th:href="@{/{id}/delete(id=${blog.getId()})}">Delete</a></td>
+        <td><a th:href="@{/{id}/delete(id=${blog.getId()})}">Detail</a></td>
+    </tr>
+    </tbody>
+</table>
+
+<footer th:replace="/layout :: footer"></footer>
+</body>
+</html>

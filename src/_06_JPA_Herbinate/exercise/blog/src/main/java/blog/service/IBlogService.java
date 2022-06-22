@@ -8,7 +8,7 @@ import java.util.List;
 public interface IBlogService {
     List<Blog> findAll();
 
-    void create(String title, String createDay);
+    void create(String title, String createDay, int contentId);
 
     void delete(int id);
 

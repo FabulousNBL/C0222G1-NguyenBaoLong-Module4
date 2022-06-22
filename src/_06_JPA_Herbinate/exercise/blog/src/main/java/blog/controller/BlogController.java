@@ -34,7 +34,8 @@ public class BlogController {
     @PostMapping("/create")
     private String create(BlogDTO blogDTO) {
         blogService.create(blogDTO.getContent());
-        blogService.create(blogDTO.getTitle(), blogDTO.getCreateDay());
+        int id = blogService.findAllBlogDetail().size();
+        blogService.create(blogDTO.getTitle(), blogDTO.getCreateDay(),id);
         return "redirect:/";
     }
 

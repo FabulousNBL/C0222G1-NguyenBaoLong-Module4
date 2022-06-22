@@ -33,8 +33,8 @@ public class BlogService implements IBlogService {
     }
 
     @Override
-    public void create(String title, String createDay) {
-        blogRepository.create(title, createDay);
+    public void create(String title, String createDay, int content) {
+        blogRepository.create(title, createDay, content);
     }
 
     @Override

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+</head>
+<body>
+<h3>Product</h3>
+<p>
+    <a th:href="@{/create-category}">
+        Add new category
+    </a>
+</p>
+
+<!--<form action="/search">-->
+<!--    <label>-->
+<!--        <input type="text" name="nameProduct">-->
+<!--    </label>-->
+<!--    <button type="submit">Tìm kiếm</button>-->
+<!--</form>-->
+
+<table id="blog">
+    <thead>
+    <tr>
+        <th>STT</th>
+        <th>Id</th>
+        <th>Thể loại</th>
+
+        <th>Edit</th>
+        <th>Delete</th>
+        <th>Detail</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="category,varStat : ${categoryList}">
+        <td th:text="${varStat.count}"></td>
+        <td th:text="${category.id}"></td>
+        <td th:text="${category.type}"></td>
+        <td><a th:href="@{/{id}/edit-category(id=${category.getId()})}">Update</a></td>
+        <td><a th:href="@{/{id}/delete-category(id=${category.getId()})}">Delete</a></td>
+        <td><a th:href="@{/{id}/blog(id=${category.getId()})}">Detail</a></td>
+    </tr>
+    </tbody>
+</table>
+<footer th:replace="/layout :: footer"></footer>
+</body>
+</html>

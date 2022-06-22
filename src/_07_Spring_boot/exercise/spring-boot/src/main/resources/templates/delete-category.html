@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head"></head>
+<body>
+<h3>Delete Blog</h3>
+<p>
+    <a th:href="@{/}">
+        Back to Type list
+    </a>
+</p>
+<div id="form">
+    <form th:action="@{/delete-category}" th:object="${category}" method="post">
+        <input type="hidden" th:field="*{id}">
+        <div>
+            <label>Thể loại</label>
+            <input type="text" th:field="*{type}">
+        </div>
+
+        <button type="submit">Delete</button>
+    </form>
+</div>
+<footer th:replace="/layout :: footer"></footer>
+</body>
+</html>

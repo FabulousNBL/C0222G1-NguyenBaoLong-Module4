@@ -11,7 +11,6 @@ public class Blog {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String title;
-
     @Column(name = "create_day")
     private String createDay;
     @ColumnDefault("0")
