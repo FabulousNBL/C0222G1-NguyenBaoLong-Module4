@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head"></head>
+<body>
+<h3>Create Blog</h3>
+<p>
+    <a th:href="@{/}">
+        <button>
+            Back to Product list
+        </button>
+    </a>
+</p>
+<div id="form">
+    <form th:action="@{/create}" th:object="${product}" method="post">
+        <div>
+            <label>Tên sản phẩm</label>
+            <input type="text" th:field="*{name}">
+            <p style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
+        </div>
+
+        <div>
+            <label>Giá sản phẩm</label>
+            <input type="text" th:field="*{price}">
+            <p style="color: red" th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></p>
+        </div>
+
+        <div>
+            <label>Chi tiết sản phẩm</label>
+            <input type="text" th:field="*{description}">
+            <p style="color: red" th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></p>
+        </div>
+
+        <div>
+            <label>Nhà sản xuất</label>
+            <input type="text" th:field="*{producer}">
+            <p style="color: red" th:if="${#fields.hasErrors('producer')}" th:errors="*{producer}"></p>
+        </div>
+
+
+        <button type="submit">Create</button>
+    </form>
+</div>
+<footer th:replace="/layout :: footer"></footer>
+</body>
+</html>

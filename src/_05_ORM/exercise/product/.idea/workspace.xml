@@ -20,51 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4404bf1-96ce-411d-9d1e-081c910816f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../_07_Spring_boot/exercise/spring-boot/src/main/java/blog/blog/controller/BlogController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../_07_Spring_boot/exercise/spring-boot/src/main/java/blog/blog/model/Blog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../_07_Spring_boot/exercise/spring-boot/src/main/java/blog/blog/model/BlogDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../_07_Spring_boot/exercise/spring-boot/src/main/java/blog/blog/model/BlogDetail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../_07_Spring_boot/exercise/spring-boot/src/main/java/blog/blog/model/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../_07_Spring_boot/exercise/spring-boot/src/main/java/blog/blog/repository/IBlogDetailRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../_07_Spring_boot/exercise/spring-boot/src/main/java/blog/blog/repository/IBlogRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../_07_Spring_boot/exercise/spring-boot/src/main/java/blog/blog/repository/ICategoryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../_07_Spring_boot/exercise/spring-boot/src/main/java/blog/blog/service/IBlogDetailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../_07_Spring_boot/exercise/spring-boot/src/main/java/blog/blog/service/IBlogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../_07_Spring_boot/exercise/spring-boot/src/main/java/blog/blog/service/ICategoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../_07_Spring_boot/exercise/spring-boot/src/main/java/blog/blog/service/impl/BlogDetailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../_07_Spring_boot/exercise/spring-boot/src/main/java/blog/blog/service/impl/BlogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../_07_Spring_boot/exercise/spring-boot/src/main/java/blog/blog/service/impl/CategoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../_07_Spring_boot/exercise/spring-boot/src/main/resources/templates/create-category.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../_07_Spring_boot/exercise/spring-boot/src/main/resources/templates/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../_07_Spring_boot/exercise/spring-boot/src/main/resources/templates/delete-category.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../_07_Spring_boot/exercise/spring-boot/src/main/resources/templates/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../_07_Spring_boot/exercise/spring-boot/src/main/resources/templates/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../_07_Spring_boot/exercise/spring-boot/src/main/resources/templates/edit-category.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../_07_Spring_boot/exercise/spring-boot/src/main/resources/templates/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../_07_Spring_boot/exercise/spring-boot/src/main/resources/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../_07_Spring_boot/exercise/spring-boot/src/main/resources/templates/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../_07_Spring_boot/exercise/spring-boot/src/main/resources/templates/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../_07_Spring_boot/exercise/spring-boot/src/main/resources/templates/menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_08_Validation/exercise/product/src/main/java/com/example/product/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_08_Validation/exercise/product/src/main/java/com/example/product/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_08_Validation/exercise/product/src/main/java/com/example/product/repository/IProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_08_Validation/exercise/product/src/main/java/com/example/product/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_08_Validation/exercise/product/src/main/java/com/example/product/service/impl/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_08_Validation/exercise/product/src/main/resources/templates/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_08_Validation/exercise/product/src/main/resources/templates/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_08_Validation/exercise/product/src/main/resources/templates/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_08_Validation/exercise/product/src/main/resources/templates/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_08_Validation/exercise/product/src/main/resources/templates/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_08_Validation/exercise/product/src/main/resources/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../demo/ss8/spring-custom-phone-validate" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../demo/ss8/spring-custom-phone-validate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../_01_SpringMVC/practice/customer/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_01_SpringMVC/practice/customer/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/build/classes/java/main/blog/controller/BlogController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/build/classes/java/main/blog/controller/BlogController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/build/classes/java/main/blog/model/Blog.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/build/classes/java/main/blog/model/Blog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/build/classes/java/main/blog/repository/IBlogRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/build/classes/java/main/blog/repository/IBlogRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/build/classes/java/main/blog/service/IBlogService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/build/classes/java/main/blog/service/IBlogService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/build/classes/java/main/blog/service/impl/BlogService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/build/classes/java/main/blog/service/impl/BlogService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/build/libs/blog-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/build/libs/blog-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/src/main/java/blog/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/src/main/java/blog/controller/BlogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/src/main/java/blog/model/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/src/main/java/blog/model/Blog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/src/main/java/blog/repository/IBlogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/src/main/java/blog/repository/IBlogRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/src/main/java/blog/service/IBlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/src/main/java/blog/service/IBlogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/src/main/java/blog/service/impl/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_06_JPA_Herbinate/exercise/blog/src/main/java/blog/service/impl/BlogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/product/repository/IProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/product/repository/IProductRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,6 +188,8 @@
       <workItem from="1655799768315" duration="2859000" />
       <workItem from="1655817416814" duration="466000" />
       <workItem from="1655916044994" duration="1721000" />
+      <workItem from="1655978260967" duration="1076000" />
+      <workItem from="1655997596010" duration="2300000" />
     </task>
     <servers />
   </component>
@@ -293,5 +265,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="905" height="179" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1655732793551" />
+    <state x="65" y="25" key="new project wizard" timestamp="1655978317264">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="65" y="25" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1655978317264" />
   </component>
 </project>
