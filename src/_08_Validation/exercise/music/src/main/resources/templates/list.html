@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+</head>
+<body>
+<h3>Product</h3>
+<p>
+    <a th:href="@{/create}">
+        Add new user
+    </a>
+</p>
+
+<form action="/search">
+    <label>
+        <input type="text" name="title">
+    </label>
+    <button type="submit">Tìm kiếm</button>
+</form>
+
+
+<table id="blog">
+    <thead>
+    <tr>
+        <th>STT</th>
+        <th>Id</th>
+        <th>Tên bài hát</th>
+        <th>Ca sĩ thể hiện</th>
+        <th>Thể loại nhạc</th>
+        <th>Edit</th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="song,varStat : ${songList}">
+        <td th:text="${varStat.count}"></td>
+        <td th:text="${song.id}"></td>
+        <td th:text="${song.name}"></td>
+        <td th:text="${song.singer}"></td>
+        <td th:text="${song.type}"></td>
+
+        <td><a th:href="@{/{id}/edit(id=${song.getId()})}">Update</a></td>
+
+    </tr>
+    </tbody>
+</table>
+
+<footer th:replace="/layout :: footer"></footer>
+</body>
+</html>

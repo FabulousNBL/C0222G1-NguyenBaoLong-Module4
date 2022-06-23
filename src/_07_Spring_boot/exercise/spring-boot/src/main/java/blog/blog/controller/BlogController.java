@@ -80,9 +80,9 @@ public class BlogController {
 
     @GetMapping("/search")
 
-    private String search(String title, Model model){
-        model.addAttribute("blogList", blogService.searchByTitle(title));
-        return "/list";
+    private String search(@RequestParam(name = "page", defaultValue = "0") int page,String title, Model model){
+        model.addAttribute("blogList", blogService.searchByTitle(title,PageRequest.of(page,2)));
+        return "/index";
     }
 
     @GetMapping("/")
@@ -116,9 +116,15 @@ public class BlogController {
     }
 
     @GetMapping("{idCategory}/blog")
-    public String blog(@PathVariable(value = "idCategory", required = false) Integer id, Model model){
+    public String blog(@RequestParam(name = "page", defaultValue = "0") int page,@PathVariable("idCategory") int id, Model model){
         model.addAttribute("category", iCategoryService.findById(id));
-        return "/list";
+
+
+        Sort sort = Sort.by("title").ascending();
+        Page<Blog> list = blogService.list(id,PageRequest.of(page, 2, sort));
+        model.addAttribute("blogList", list);
+        return "/index";
+
     }
 
     @GetMapping("{id}/delete-category")

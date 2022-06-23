@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+</head>
+<body>
+<h3>Product</h3>
+<p>
+    <a th:href="@{/create}">
+        Add new user
+    </a>
+</p>
+
+<form action="/search">
+    <label>
+        <input type="text" name="title">
+    </label>
+    <button type="submit">Tìm kiếm</button>
+</form>
+
+
+<table id="blog">
+    <thead>
+    <tr>
+        <th>STT</th>
+        <th>Id</th>
+        <th>Họ</th>
+        <th>Tên</th>
+        <th>Số điện thoại</th>
+        <th>Tuổi</th>
+        <th>Email</th>
+        <th>Edit</th>
+        <th>Delete</th>
+        <th>Detail</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user,varStat : ${userList}">
+        <td th:text="${varStat.count}"></td>
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.lastName}"></td>
+        <td th:text="${user.firstName}"></td>
+        <td th:text="${user.phone}"></td>
+        <td th:text="${user.age}"></td>
+        <td th:text="${user.email}"></td>
+        <td><a th:href="@{/{id}/edit(id=${user.getId()})}">Update</a></td>
+        <td><a th:href="@{/{id}/delete(id=${user.getId()})}">Delete</a></td>
+        <td><a th:href="@{/{id}/delete(id=${user.getId()})}">Detail</a></td>
+    </tr>
+    </tbody>
+</table>
+<div>
+    <span>
+        <a th:if = "${userList.hasPrevious()}" th:href="@{/(page = ${userList.number - 1})}">Previous</a>
+    </span>
+    <span th:each="pageNo: ${#numbers.sequence(0,userList.totalPages - 1)}">
+        <a th:href="@{/(page = ${pageNo})}" th:text="${pageNo}"></a>
+    </span>
+    <span>
+        <a th:if = "${userList.hasNext()}" th:href="@{/(page = ${userList.number +1})}">Next</a>
+    </span>
+</div>
+<footer th:replace="/layout :: footer"></footer>
+</body>
+</html>

@@ -42,5 +42,8 @@ public interface IBlogRepository extends JpaRepository<Blog,Integer> {
 
 
     @Query(value = "select * from blog where title like %:tile% and status = 0", nativeQuery = true)
-    List<Blog> searchByTitle(@Param("tile") String title);
+    Page<Blog> searchByTitle(@Param("tile") String title, Pageable pageable);
+
+    @Query(value = "select * from blog where category_id = :category and status =0", nativeQuery= true)
+    Page<Blog> list(@Param("category") int category, Pageable pageable);
 }
