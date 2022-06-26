@@ -2,14 +2,88 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74aef20e-af96-4e94-94a8-a97d2b51fce9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/java/com/example/casestudy/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/java/com/example/casestudy/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/java/com/example/casestudy/dto/CustomerDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/java/com/example/casestudy/model/contract/AttachService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/java/com/example/casestudy/model/contract/Contract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/java/com/example/casestudy/model/contract/ContractDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/java/com/example/casestudy/model/customer/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/java/com/example/casestudy/model/customer/CustomerType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/java/com/example/casestudy/model/employee/Degree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/java/com/example/casestudy/model/employee/Division.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/java/com/example/casestudy/model/employee/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/java/com/example/casestudy/model/employee/Position.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/java/com/example/casestudy/model/employee/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/java/com/example/casestudy/model/employee/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/java/com/example/casestudy/model/service/RentType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/java/com/example/casestudy/model/service/Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/java/com/example/casestudy/model/service/ServiceType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/java/com/example/casestudy/repository/customer/ICustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/java/com/example/casestudy/repository/customer/ICustomerTypeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/java/com/example/casestudy/service/customer/ICustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/java/com/example/casestudy/service/customer/ICustomerTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/java/com/example/casestudy/service/customer/impl/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/java/com/example/casestudy/service/customer/impl/CustomerTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/bootstrap413/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/bootstrap413/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/bootstrap413/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/bootstrap413/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/bootstrap413/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/bootstrap413/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/bootstrap413/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/bootstrap413/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/bootstrap413/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/bootstrap413/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/bootstrap413/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/bootstrap413/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/bootstrap413/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/bootstrap413/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/bootstrap413/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/bootstrap413/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/bootstrap413/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/bootstrap413/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/bootstrap413/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/bootstrap413/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/datatables/css/dataTables.bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/datatables/css/dataTables.bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/datatables/css/dataTables.bootstrap4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/datatables/css/dataTables.bootstrap4.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/datatables/css/dataTables.foundation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/datatables/css/dataTables.foundation.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/datatables/css/dataTables.jqueryui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/datatables/css/dataTables.jqueryui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/datatables/css/dataTables.semanticui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/datatables/css/dataTables.semanticui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/datatables/css/jquery.dataTables.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/datatables/css/jquery.dataTables.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/datatables/images/sort_asc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/datatables/images/sort_asc_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/datatables/images/sort_both.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/datatables/images/sort_desc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/datatables/images/sort_desc_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/datatables/js/dataTables.bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/datatables/js/dataTables.bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/datatables/js/dataTables.bootstrap4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/datatables/js/dataTables.bootstrap4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/datatables/js/dataTables.foundation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/datatables/js/dataTables.foundation.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/datatables/js/dataTables.jqueryui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/datatables/js/dataTables.jqueryui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/datatables/js/dataTables.semanticui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/datatables/js/dataTables.semanticui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/datatables/js/jquery.dataTables.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/datatables/js/jquery.dataTables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/static/jquery/jquery-3.5.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/templates/customer/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/templates/customer/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/templates/footer_header/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/templates/footer_header/temp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case-study/src/main/resources/templates/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../demo/ss8/spring-custom-phone-validate" beforeDir="false" afterPath="$PROJECT_DIR$/../../../demo/ss8/spring-custom-phone-validate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../_01_SpringMVC/practice/customer/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../_01_SpringMVC/practice/customer/customer-management" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_05_ORM/exercise/product/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../_05_ORM/exercise/product/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_07_Spring_boot/exercise/spring-boot/src/main/java/blog/blog/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../_07_Spring_boot/exercise/spring-boot/src/main/java/blog/blog/controller/BlogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_07_Spring_boot/exercise/spring-boot/src/main/java/blog/blog/repository/IBlogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../_07_Spring_boot/exercise/spring-boot/src/main/java/blog/blog/repository/IBlogRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_07_Spring_boot/exercise/spring-boot/src/main/java/blog/blog/repository/ICategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../_07_Spring_boot/exercise/spring-boot/src/main/java/blog/blog/repository/ICategoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_07_Spring_boot/exercise/spring-boot/src/main/java/blog/blog/service/IBlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../_07_Spring_boot/exercise/spring-boot/src/main/java/blog/blog/service/IBlogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_07_Spring_boot/exercise/spring-boot/src/main/java/blog/blog/service/impl/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../_07_Spring_boot/exercise/spring-boot/src/main/java/blog/blog/service/impl/BlogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_07_Spring_boot/exercise/spring-boot/src/main/resources/templates/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_07_Spring_boot/exercise/spring-boot/src/main/java/blog/blog/model/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../_07_Spring_boot/exercise/spring-boot/src/main/java/blog/blog/model/Blog.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +104,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../C0222G1-NguyenBaoLong-Module3/case_study_servlet" />
   </component>
   <component name="RunManager">
     <configuration name="FormRegistApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -51,6 +126,7 @@
       <option name="presentableId" value="Default" />
       <updated>1655957066663</updated>
       <workItem from="1655957073595" duration="306000" />
+      <workItem from="1656142157716" duration="120000" />
     </task>
     <servers />
   </component>
@@ -58,6 +134,10 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1656142277120">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1656142277120" />
     <state x="65" y="25" key="new project wizard" timestamp="1655957382161">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

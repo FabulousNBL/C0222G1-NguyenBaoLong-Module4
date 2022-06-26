@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+</head>
+<body>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div th:replace="~{/footer_header/header :: header}"></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12" >
+            <h3>Add new contract</h3>
+            <p>
+                <a th:href="@{/contract/list}">
+                    <button>
+                        Back to contract list
+                    </button>
+                </a>
+            </p>
+
+            private int id;
+            private String startDay;
+            private String endDay;
+            private double deposit;
+            private double total;
+            private Employee employee;
+            private Customer customer;
+            private Service service;
+            <form action="/contract/create" method="post" th:object="${contract}">
+                <div class="mb-3">
+                    <label for="nameCustomer" class="form-label">Start day:</label>
+                    <p class="text-danger" th:if="${#fields.hasErrors('startDay')}" th:errors="*{startDay}"></p>
+                    <input class="form-control" type="date" name="startDay" id="nameCustomer" th:field="*{startDay}">
+                </div>
+                <div class="mb-3">
+                    <label for="dateOfBirth" class="form-label">End day:</label>
+                    <p class="text-danger" th:if="${#fields.hasErrors('endDay')}" th:errors="*{endDay}"></p>
+                    <input class="form-control" type="date" name="endDay" id="dateOfBirth" th:field="*{endDay}">
+                </div>
+                <div class="mb-3">
+                    <label for="idCard" class="form-label">Deposit:</label>
+                    <p class="text-danger" th:if="${#fields.hasErrors('deposit')}" th:errors="*{deposit}"></p>
+                    <input class="form-control" type="text" name="deposit" id="idCard" th:field="*{deposit}">
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Total:</label>
+                    <p class="text-danger" th:if="${#fields.hasErrors('total')}" th:errors="*{total}"></p>
+                    <input class="form-control" type="text" name="total" id="phone" th:field="*{total}">
+                </div>
+
+                <div class="mb-3">
+                    <label for="customerType" class="form-label">Employee:</label>
+                    <select class="form-select" th:field="*{employee}" id="customerType" name="customerType">
+                        <option th:each="items : ${employeeList}" th:text="${items.name}"
+                                th:value="${items.id}">
+                        </option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="customer" class="form-label">Customer:</label>
+                    <select class="form-select" th:field="*{customer}" id="customer" name="customerType">
+                        <option th:each="items : ${customerList}" th:text="${items.name}"
+                                th:value="${items.id}">
+                        </option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="service" class="form-label">Service:</label>
+                    <select class="form-select" th:field="*{service}" id="service" name="customerType">
+                        <option th:each="items : ${serviceList}" th:text="${items.name}"
+                                th:value="${items.id}">
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div th:replace="~{/footer_header/footer::footer}"></div>
+    </div>
+</div>
+</body>
+<script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+        integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+        crossorigin="anonymous"></script>
+
+</html>

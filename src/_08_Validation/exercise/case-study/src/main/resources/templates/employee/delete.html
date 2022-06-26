@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head"></head>
+<body>
+<h3>Are you sure to delete this customer ?</h3>
+<p>
+    <a th:href="@{/employee/list}">
+        Back to customer list
+    </a>
+</p>
+<div id="form">
+    <form th:action="@{/employee/delete}" th:object="${employee}" method="post">
+        <input type="hidden" th:field="*{id}">
+        <div id="form">
+            <div class="cusdetail">
+                <label>Tên nhân viên: </label>
+                <label th:text="${employee.name}"></label>
+            </div>
+
+            <div class="cusdetail">
+                <label>Ngày sinh: </label>
+                <label th:text="${employee.birthday}"></label>
+            </div>
+
+            <div class="cusdetail">
+                <label>Email: </label>
+                <label th:text="${employee.email}"></label>
+            </div>
+
+            <div class="cusdetail">
+                <label>Vị trí: </label>
+                <label th:text="${employee.division.name}"></label>
+            </div>
+
+            <div class="cusdetail">
+                <label>Bộ phận: </label>
+                <label th:text="${employee.position.name}"></label>
+            </div>
+
+            <div class="cusdetail">
+                <label>Tài khoản: </label>
+                <label th:text="${employee.user.userName}"></label>
+            </div>
+
+
+        </div>
+
+        <button type="submit">Delete</button>
+
+    </form>
+</div>
+<footer th:replace="/layout :: footer"></footer>
+</body>
+</html>
