@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
 
 import javax.validation.Valid;
 
@@ -24,26 +24,26 @@ public class UserController {
     private IUserService iUserService;
 
     @GetMapping
-    public String home(@RequestParam(value = "page", defaultValue = "0") int page, Model model){
-        Sort sort=Sort.by("first_name").ascending();
-        Page<User> list = iUserService.findAllUser(PageRequest.of(page,2,sort));
+    public String home(@RequestParam(value = "page", defaultValue = "0") int page, Model model) {
+        Sort sort = Sort.by("first_name").ascending();
+        Page<User> list = iUserService.findAllUser(PageRequest.of(page, 2, sort));
         model.addAttribute("userList", list);
         return "/list";
     }
 
     @GetMapping("/create")
-    public String create(Model model){
+    public String create(Model model) {
         model.addAttribute("user", new User());
         return "/create";
     }
 
     @PostMapping("/create")
-    public String add(@Valid @ModelAttribute(name = "user") User user, BindingResult bindingResult){
-        if (bindingResult.hasErrors()){
+    public String add(@Valid @ModelAttribute(name = "user") User user, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
             return "/create";
         }
 
-        iUserService.create(user.getLastName(),user.getFirstName(),user.getPhone(),user.getAge(), user.getEmail());
+        iUserService.create(user.getLastName(), user.getFirstName(), user.getPhone(), user.getAge(), user.getEmail());
 
         return "redirect:/";
     }
