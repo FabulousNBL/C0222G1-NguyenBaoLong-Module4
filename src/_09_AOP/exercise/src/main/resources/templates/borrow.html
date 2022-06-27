@@ -8,16 +8,16 @@
         Back to book list
     </a>
 </p>
-<div >
+<div>
     <form th:action="@{/borrow}" th:object="${book}" method="post">
         <input type="hidden" th:field="*{id}">
         <div>
-            <div >
+            <div>
                 <label>Tên sách: </label>
                 <label th:text="${book.name}"></label>
             </div>
 
-            <div >
+            <div>
                 <label>Tác giả: </label>
                 <label th:text="${book.author}"></label>
             </div>

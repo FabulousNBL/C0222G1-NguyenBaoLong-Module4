@@ -12,7 +12,7 @@ import javax.transaction.Transactional;
 @Transactional
 public interface IBookRepository extends JpaRepository<Book, Integer> {
 
-    @Query(value = "select * from book where status = 0", nativeQuery =true)
+    @Query(value = "select * from book where status = 0", nativeQuery = true)
     Page<Book> findAll(Pageable pageable);
 
     @Query(value = "select * from book where id = :id", nativeQuery = true)

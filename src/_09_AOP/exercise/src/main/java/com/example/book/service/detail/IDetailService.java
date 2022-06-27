@@ -11,5 +11,4 @@ public interface IDetailService {
 
     void delete(Detail detail);
 
-    Page<Detail> findAll(Pageable pageable);
 }
