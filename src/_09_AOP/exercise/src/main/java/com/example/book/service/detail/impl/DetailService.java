@@ -23,10 +23,7 @@ public class DetailService implements IDetailService {
         iDetailRepository.delete(detail);
     }
 
-    @Override
-    public Page<Detail> findAll(Pageable pageable) {
-        return iDetailRepository.findAll(pageable);
-    }
+
 
     @Override
     public void save(Detail detail) {

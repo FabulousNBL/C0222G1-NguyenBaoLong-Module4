@@ -27,6 +27,6 @@ public class BookAspect {
 
     @After("controllerPointCut()")
     public void countBorrow() {
-        logger.info(count + " persons has borrowed.");
+        System.out.println(count + " persons has borrowed.");
     }
 }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div th:replace="~{/footer_header/header :: header}"></div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="card col-md-3 p-2" style="width: 18rem;" th:object="${flower}">
+                <input type="hidden" th:field="*{id}">
+                    <img class="card-img-top"
+                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnouwFyPfmj0bUqUYShAlNJTpeas3ir--u0A&usqp=CAU"
+                         alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text" th:text="${flower.id}"></p>
+                        <p class="card-text" th:text="${flower.name}"></p>
+                        <p class="card-text" th:text="${flower.price}"></p>
+                        <p class="card-text"></p>
+                    </div>
+                    <div>
+                        <a th:href="@{/addToCart/{id}(id =${flower.id},action = 'list')}">
+                            <button>Thêm vào giỏ</button>
+                        </a>
+                    </div>
+            </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+</body>
+<script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+        integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+        crossorigin="anonymous"></script>
+
+</html>
