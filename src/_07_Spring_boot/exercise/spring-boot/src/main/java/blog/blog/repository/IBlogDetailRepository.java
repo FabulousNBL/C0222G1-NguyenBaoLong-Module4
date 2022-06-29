@@ -20,4 +20,6 @@ public interface IBlogDetailRepository extends JpaRepository<BlogDetail,Integer>
     @Modifying
     @Query(value = "insert into blog_detail (content) values (:content) ", nativeQuery = true)
     void create(@Param("content") String content);
+
+
 }

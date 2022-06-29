@@ -11,22 +11,25 @@
 </head>
 <body>
 <h4>
-    <a th:href="@{/list}"><button><i class="fa-solid fa-house"></i></button> </a>
+    <a th:href="@{/list}">
+        <button><i class="fa-solid fa-house"></i></button>
+    </a>
 </h4>
 
 <div class="season">
     <div class="container-flud">
         <div class="row">
-            <div class="card col-md-3 p-2" style="width: 18rem;" th:each="flower,varStat : ${cart.productIntegerMap}">
-                <img class="card-img-top" style="height: 289px" th:src="${product.getKey().url}">
+            <div class="card col-md-3 p-2" style="width: 18rem;" th:each="flower,varStat : ${cart.flower}">
+                <img class="card-img-top" style="height: 289px" th:src="${flower.getKey().url}">
                 <div class="card-body">
-                    <p th:text="${product.getKey().nameProduct}"></p>
-                    <p th:text="${product.getKey().price}"></p>
+                    <p th:text="${flower.getKey().name}"></p>
+                    <p th:text="${flower.getKey().price}"></p>
                     <td>
                         <span>Số lượng sản phẩm bạn đã thêm vào giỏ hàng: </span>
-                        <a id="decrease_button" th:text="${'-'}"></a>
-                        <span th:text="${product.getValue()}"></span>
-                        <a id="increase_button" th:href="@{/{id}/add-cart(id = ${product.getKey().id},action = 'show')}"
+                        <a id="decrease_button" th:href="@{/decrease/{id}(id = ${flower.getKey().id},action = 'show')}"
+                           th:text="${'+'}"></a>
+                        <span th:text="${flower.getValue()}"></span>
+                        <a id="increase_button" th:href="@{/add/{id}(id = ${flower.getKey().id},action = 'show')}"
                            th:text="${'+'}"></a>
                     </td>
                 </div>

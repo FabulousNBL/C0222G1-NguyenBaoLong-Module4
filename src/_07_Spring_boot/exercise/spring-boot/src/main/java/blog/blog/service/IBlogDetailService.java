@@ -8,4 +8,6 @@ public interface IBlogDetailService {
     List<BlogDetail> findAllBlogDetail();
 
     void create(String content);
+
+   BlogDetail findBlogDetailById(int id);
 }

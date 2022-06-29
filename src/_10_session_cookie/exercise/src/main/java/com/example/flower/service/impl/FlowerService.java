@@ -2,7 +2,6 @@ package com.example.flower.service.impl;
 
 import com.example.flower.model.Flower;
 import com.example.flower.repository.IFlowerRepository;
-import com.example.flower.service.IFlowerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

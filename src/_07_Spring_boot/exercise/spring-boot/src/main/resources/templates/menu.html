@@ -23,9 +23,6 @@
         <th>STT</th>
         <th>Id</th>
         <th>Thể loại</th>
-
-        <th>Edit</th>
-        <th>Delete</th>
         <th>Detail</th>
 
     </tr>
@@ -35,8 +32,6 @@
         <td th:text="${varStat.count}"></td>
         <td th:text="${category.id}"></td>
         <td th:text="${category.type}"></td>
-        <td><a th:href="@{/{id}/edit-category(id=${category.getId()})}">Update</a></td>
-        <td><a th:href="@{/{id}/delete-category(id=${category.getId()})}">Delete</a></td>
         <td><a th:href="@{/{id}/blog(id=${category.getId()})}">Detail</a></td>
     </tr>
     </tbody>

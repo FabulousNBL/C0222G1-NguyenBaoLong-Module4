@@ -1,5 +1,6 @@
 package blog.blog.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
@@ -18,10 +19,12 @@ public class Blog {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "content_id", referencedColumnName = "id")
+    @JsonBackReference(value = "blog_detail")
     private BlogDetail blogDetail;
 
     @ManyToOne
     @JoinColumn(name = "category_id",referencedColumnName = "id")
+    @JsonBackReference(value = "category")
     private Category category;
 
 

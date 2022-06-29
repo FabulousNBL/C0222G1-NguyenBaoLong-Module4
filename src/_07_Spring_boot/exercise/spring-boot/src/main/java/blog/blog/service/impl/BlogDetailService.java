@@ -21,4 +21,9 @@ public class BlogDetailService implements IBlogDetailService {
     public void create(String content) {
         blogDetailRepository.create(content);
     }
+
+    @Override
+    public BlogDetail findBlogDetailById(int id) {
+        return blogDetailRepository.findById(id).orElse(null);
+    }
 }

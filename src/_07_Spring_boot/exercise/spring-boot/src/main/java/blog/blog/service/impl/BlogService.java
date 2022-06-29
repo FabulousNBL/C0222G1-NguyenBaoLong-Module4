@@ -60,5 +60,10 @@ public class BlogService implements IBlogService {
         return blogRepository.list(category,pageable);
     }
 
+    @Override
+    public void update(Blog blog) {
+        blogRepository.save(blog);
+    }
+
 
 }

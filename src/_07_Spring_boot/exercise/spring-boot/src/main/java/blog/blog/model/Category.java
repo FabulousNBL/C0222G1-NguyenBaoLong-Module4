@@ -1,5 +1,6 @@
 package blog.blog.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
@@ -14,6 +15,7 @@ public class Category {
     @ColumnDefault("0")
     private int status;
     @OneToMany(mappedBy = "category")
+    @JsonBackReference(value = "back_category")
     private Set<Blog> blog;
 
 

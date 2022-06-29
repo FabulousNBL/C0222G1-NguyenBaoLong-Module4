@@ -17,20 +17,20 @@
         <div class="row">
             <div class="card col-md-3 p-2" style="width: 18rem;" th:object="${flower}">
                 <input type="hidden" th:field="*{id}">
-                    <img class="card-img-top"
-                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnouwFyPfmj0bUqUYShAlNJTpeas3ir--u0A&usqp=CAU"
-                         alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text" th:text="${flower.id}"></p>
-                        <p class="card-text" th:text="${flower.name}"></p>
-                        <p class="card-text" th:text="${flower.price}"></p>
-                        <p class="card-text"></p>
-                    </div>
-                    <div>
-                        <a th:href="@{/addToCart/{id}(id =${flower.id},action = 'list')}">
-                            <button>Thêm vào giỏ</button>
-                        </a>
-                    </div>
+                <img class="card-img-top"
+                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnouwFyPfmj0bUqUYShAlNJTpeas3ir--u0A&usqp=CAU"
+                     alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text" th:text="${flower.id}"></p>
+                    <p class="card-text" th:text="${flower.name}"></p>
+                    <p class="card-text" th:text="${flower.price}"></p>
+                    <p class="card-text"></p>
+                </div>
+                <div>
+                    <a th:href="@{/addToCart/{id}(id =${flower.id},action = 'list')}">
+                        <button>Thêm vào giỏ</button>
+                    </a>
+                </div>
             </div>
             </a>
         </div>

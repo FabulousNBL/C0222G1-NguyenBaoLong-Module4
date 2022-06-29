@@ -1,31 +1,32 @@
 package blog.blog.controller;
 
-
-
 import blog.blog.model.Blog;
 import blog.blog.model.BlogDTO;
+import blog.blog.model.BlogDetail;
 import blog.blog.model.Category;
-import blog.blog.repository.IBlogDetailRepository;
+import blog.blog.service.IBlogDetailService;
 import blog.blog.service.IBlogService;
 import blog.blog.service.ICategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
-@Controller
+import java.util.List;
+
+@RestController
+
 public class BlogController {
     @Autowired
     private IBlogService blogService;
 
     @Autowired
-    private IBlogDetailRepository blogDetailRepository;
+    private IBlogDetailService blogDetailRepository;
 
     @Autowired
     private ICategoryService iCategoryService;
@@ -46,11 +47,11 @@ public class BlogController {
     }
 
     @PostMapping("/create")
-    private String create(BlogDTO blogDTO) {
+    private ResponseEntity<?> create(@RequestBody BlogDTO blogDTO) {
         blogDetailRepository.create(blogDTO.getContent());
         int id = blogDetailRepository.findAllBlogDetail().size();
-        blogService.create(blogDTO.getTitle(), blogDTO.getCreateDay(),id,blogDTO.getId());
-        return "redirect:/";
+        blogService.create(blogDTO.getTitle(), blogDTO.getCreateDay(),id,blogDTO.getCategory());
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     @GetMapping("/{id}/delete")
@@ -73,9 +74,10 @@ public class BlogController {
     }
 
     @PostMapping("/edit")
-    private String update(BlogDTO blogDTO, Blog blog) {
+    private ResponseEntity<?> update(@RequestBody BlogDTO blogDTO, Blog blog) {
+
         blogService.update(blogDTO.getTitle(), blogDTO.getCreateDay(),blog.getCategory().getId(), blog.getId());
-        return "redirect:/list-blog";
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @GetMapping("/search")
@@ -86,9 +88,12 @@ public class BlogController {
     }
 
     @GetMapping("/")
-    public String home(Model model){
-        model.addAttribute("categoryList", iCategoryService.findAllCategory());
-        return "/menu";
+    public ResponseEntity<List<Category>> home(Model model){
+        List<Category> list = iCategoryService.findAllCategory();
+        if (list.isEmpty()){
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(list, HttpStatus.OK);
     }
 
     @GetMapping("/create-category")
@@ -116,14 +121,17 @@ public class BlogController {
     }
 
     @GetMapping("{idCategory}/blog")
-    public String blog(@RequestParam(name = "page", defaultValue = "0") int page,@PathVariable("idCategory") int id, Model model){
+    public ResponseEntity<Page<Blog>> blog(@RequestParam(name = "page", defaultValue = "0") int page,@PathVariable("idCategory") int id, Model model){
         model.addAttribute("category", iCategoryService.findById(id));
 
 
         Sort sort = Sort.by("title").ascending();
         Page<Blog> list = blogService.list(id,PageRequest.of(page, 2, sort));
         model.addAttribute("blogList", list);
-        return "/index";
+        if (list.isEmpty()){
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(list,HttpStatus.OK);
 
     }
 
@@ -133,9 +141,27 @@ public class BlogController {
         return "/delete-category";
     }
 
-    @PostMapping("/delete-category")
-    public String removeCategory(Category category){
-        iCategoryService.delete(category.getId());
-        return "redirect:/";
+    @GetMapping("/detail/{id}")
+    public ResponseEntity<BlogDetail> detail(@PathVariable("id") int id){
+        BlogDetail detail = blogDetailRepository.findBlogDetailById(id);
+        if (detail == null){
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(detail,HttpStatus.OK);
+    }
+
+    @PostMapping("/edit/{id}")
+    public ResponseEntity<?> edit(@PathVariable ("id") int id,
+                                  @RequestBody Blog blog){
+
+        if (blog== null){
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        blog.setId(id);
+        blogService.update(blog);
+
+
+//        blogService.update(blog.getTitle(),blog.getCreateDay(),blog.getCategory().getId(),blog.getId());
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }

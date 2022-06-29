@@ -11,7 +11,7 @@ public class Flower {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    private String codeFlower;
+    private String url;
     private String name;
     private int price;
 
@@ -26,12 +26,13 @@ public class Flower {
         this.id = id;
     }
 
-    public String getCodeFlower() {
-        return codeFlower;
+
+    public String getUrl() {
+        return url;
     }
 
-    public void setCodeFlower(String codeFlower) {
-        this.codeFlower = codeFlower;
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     public String getName() {

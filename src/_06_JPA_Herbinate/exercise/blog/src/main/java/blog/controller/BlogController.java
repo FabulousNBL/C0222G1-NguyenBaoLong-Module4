@@ -13,8 +13,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class BlogController {
     @Autowired
     private IBlogService blogService;
@@ -62,4 +63,10 @@ public class BlogController {
         blogService.update(blogDTO.getTitle(), blogDTO.getContent(), blogDTO.getCreateDay(), blog.getId());
         return "redirect:/";
     }
+
+//    @GetMapping("/category/{name}")
+//    public String showCategory(@PathVariable("name") String name,
+//                               Model model){
+//
+//    }
 }

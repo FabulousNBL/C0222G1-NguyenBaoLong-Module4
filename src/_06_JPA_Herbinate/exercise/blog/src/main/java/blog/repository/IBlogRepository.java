@@ -36,4 +36,5 @@ public interface IBlogRepository extends JpaRepository<Blog,Integer> {
                 @Param("createDay") String createDay,
                 @Param("id") int id);
 
+
 }

@@ -23,4 +23,6 @@ public interface IBlogService {
     Page<Blog> searchByTitle(String title, Pageable pageable);
 
     Page<Blog> list( int category, Pageable pageable);
+
+    void update(Blog blog);
 }

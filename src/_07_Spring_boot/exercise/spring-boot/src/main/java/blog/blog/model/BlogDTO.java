@@ -5,6 +5,7 @@ public class BlogDTO {
     private String content;
     private String createDay;
     private int id;
+    private int category;
 
     public BlogDTO() {
     }
@@ -39,5 +40,14 @@ public class BlogDTO {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+
+    public int getCategory() {
+        return category;
+    }
+
+    public void setCategory(int category) {
+        this.category = category;
     }
 }
