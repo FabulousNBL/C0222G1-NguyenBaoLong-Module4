@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+</head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+    let size = 2;
+
+    function getAll(blog) {
+        return `<tr><td >${blog.id}</td>` +
+            `<td >${blog.category.type}</td>` +
+            `<td >${blog.createDay}</td>` +
+            `<td >${blog.title}</td></tr>`
+    }
+
+    function searchTitle() {
+        debugger
+        let title = $('#titleSearch').val();
+
+        $.ajax({
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            type: "GET",
+            //tên API
+            url: `/blog/search/${title}`,
+            //xử lý khi thành công
+            success: function (event) {
+                let content = '    <tr>\n' +
+                    '        <td>Id</td>\n' +
+                    '        <td>Thể loại</td>\n' +
+                    '        <td>Ngày viết</td>\n' +
+                    '        <td>Tiêu đề</td>\n' +
+                    '    </tr>';
+                for (let i = 0; i < event.length; i++) {
+                    content += getAll(event[i]);
+                }
+                document.getElementById('blog').innerHTML = content;
+            }
+        });
+        //chặn sự kiện mặc định của thẻ
+        event.preventDefault();
+    }
+
+    // }
+    function loadMore() {
+        size += 1;
+        $.ajax({
+            type: "GET",
+            //tên API
+            url: `/blog/loadMore/${size}`,
+            success: function (event) {
+                debugger
+                let content = '    <tr>\n' +
+                    '        <td>Id</td>\n' +
+                    '        <td>Thể loại</td>\n' +
+                    '        <td>Ngày viết</td>\n' +
+                    '        <td>Tiêu đề</td>\n' +
+                    '    </tr>';
+                for (let i = 0; i < event.length; i++) {
+                    content += getAll(event[i]);
+                }
+                document.getElementById('blog').innerHTML = content;
+            }
+        });
+        //chặn sự kiện mặc định của thẻ
+        event.preventDefault();
+
+    }
+</script>
+<body>
+<h3>Product</h3>
+<p>
+    <a th:href="@{/create}">
+        Add new product
+    </a>
+</p>
+
+<form id="search">
+    <label>
+        <input type="text" name="title" id="titleSearch">
+    </label>
+    <button type="submit" onclick="searchTitle()">Tìm kiếm</button>
+</form>
+<table id="blog">
+    <thead>
+    <tr>
+
+        <th>Id</th>
+        <th>Thể loại</th>
+        <th>Tiêu đề</th>
+        <th>Ngày viết</th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="blog,varStat : ${blogList}">
+        <td th:text="${blog.id}"></td>
+        <td th:text="${blog.category.type}"></td>
+        <td th:text="${blog.title}"></td>
+        <td th:text="${blog.createDay}"></td>
+
+    </tr>
+    </tbody>
+</table>
+<div>
+    <button onclick="loadMore()">Thêm</button>
+</div>
+<div>
+    <span>
+        <a th:if="${blogList.hasPrevious()}" th:href="@{/list-blog(page = ${blogList.number - 1})}">Previous</a>
+    </span>
+    <span th:each="pageNo: ${#numbers.sequence(0,blogList.totalPages - 1)}">
+        <a th:href="@{/list-blog(page = ${pageNo})}" th:text="${pageNo}"></a>
+    </span>
+    <span>
+        <a th:if="${blogList.hasNext()}" th:href="@{/list-blog(page = ${blogList.number +1})}">Next</a>
+    </span>
+</div>
+<footer th:replace="/layout :: footer"></footer>
+</body>
+</html>

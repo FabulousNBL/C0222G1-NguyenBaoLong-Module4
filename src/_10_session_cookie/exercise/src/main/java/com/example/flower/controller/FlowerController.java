@@ -1,6 +1,5 @@
 package com.example.flower.controller;
 
-
 import com.example.flower.model.Cart;
 import com.example.flower.model.Flower;
 import com.example.flower.service.impl.IFlowerService;
@@ -10,12 +9,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import java.util.List;
-import java.util.Optional;
-
 @Controller
 @SessionAttributes("cart")
-public class ProductController {
+public class FlowerController {
 
     @Autowired
     private IFlowerService iFlowerService;
