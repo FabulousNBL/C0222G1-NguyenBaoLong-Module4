@@ -1,6 +1,7 @@
 package com.example.casestudy.model.employee;
 
 import com.example.casestudy.model.contract.Contract;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
@@ -22,18 +23,22 @@ public class Employee {
 
     @ManyToOne
     @JoinColumn(name = "degree_id", referencedColumnName = "id")
+    @JsonBackReference(value = "degree_id")
     private Degree degree;
 
     @ManyToOne
     @JoinColumn(name = "division_id", referencedColumnName = "id")
+    @JsonBackReference(value = "division_id")
     private Division division;
 
     @ManyToOne
     @JoinColumn(name = "position_id", referencedColumnName = "id")
+    @JsonBackReference(value = "position_id")
     private Position position;
 
     @OneToOne
     @JoinColumn(name = "user_name", referencedColumnName = "userName")
+    @JsonBackReference(value = "user_name")
     private User user;
 
     public Employee() {

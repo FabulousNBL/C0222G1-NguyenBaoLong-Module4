@@ -102,21 +102,27 @@ public class EmployeeController {
         redirectAttributes.addFlashAttribute("msg", "Edit successful");
         return "redirect:/employee/list";
     }
+//
+//    @GetMapping("/delete/{id}")
+//    public String delete(@PathVariable("id") int id, Model model){
+//        model.addAttribute("employee", iEmployeeService.findById(id));
+//        model.addAttribute("divisionList", divisionService.findAll());
+//        model.addAttribute("positionList", positionService.findAll());
+//        return "/employee/delete";
+//    }
 
     @GetMapping("/delete/{id}")
-    public String delete(@PathVariable("id") int id, Model model){
-        model.addAttribute("employee", iEmployeeService.findById(id));
-        model.addAttribute("divisionList", divisionService.findAll());
-        model.addAttribute("positionList", positionService.findAll());
-        return "/employee/delete";
-    }
-
-    @PostMapping("/delete")
-    public String remove(Employee employee, RedirectAttributes redirectAttributes){
-        Employee employeeDelete = iEmployeeService.findById(employee.getId());
+    public String remove(@PathVariable("id") int id, Employee employee, RedirectAttributes redirectAttributes){
+        Employee employeeDelete = iEmployeeService.findById(id);
         employeeDelete.setStatus(1);
         iEmployeeService.create(employeeDelete);
         redirectAttributes.addFlashAttribute("msg", "Delete successful");
         return "redirect:/employee/list";
+    }
+
+    @GetMapping("/search")
+    public String search(@PageableDefault( value = 2) Pageable pageable, Model model, String name){
+        model.addAttribute("employeeList", iEmployeeService.findByName(name, pageable));
+        return "/employee/list";
     }
 }

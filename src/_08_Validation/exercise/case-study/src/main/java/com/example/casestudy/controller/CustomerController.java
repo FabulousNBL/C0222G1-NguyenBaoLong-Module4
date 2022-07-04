@@ -92,4 +92,10 @@ public class CustomerController {
         return "redirect:/customer/list";
     }
 
+    @GetMapping("/search")
+    public String search(@PageableDefault( value = 2) Pageable pageable, Model model, String name){
+        model.addAttribute("customerList", customerService.findByName(name, pageable));
+        return "/customer/list";
+    }
+
 }

@@ -10,25 +10,25 @@ public class Position {
     private int id;
     private String name;
 
-    @OneToMany(mappedBy = "position")
-    private Set<Employee> employees;
+//    @OneToMany(mappedBy = "position")
+//    private Set<Employee> employees;
+//
+//    public Position(int id, String name, Set<Employee> employees) {
+//        this.id = id;
+//        this.name = name;
+//        this.employees = employees;
+//    }
 
-    public Position(int id, String name, Set<Employee> employees) {
-        this.id = id;
-        this.name = name;
-        this.employees = employees;
-    }
-
-    public Set<Employee> getEmployees() {
-        return employees;
-    }
-
-    public void setEmployees(Set<Employee> employees) {
-        this.employees = employees;
-    }
-
-    public Position() {
-    }
+//    public Set<Employee> getEmployees() {
+//        return employees;
+//    }
+//
+//    public void setEmployees(Set<Employee> employees) {
+//        this.employees = employees;
+//    }
+//
+//    public Position() {
+//    }
 
     public int getId() {
         return id;

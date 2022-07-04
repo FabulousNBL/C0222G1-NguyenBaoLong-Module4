@@ -9,6 +9,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import javax.transaction.Transactional;
+import java.util.List;
 
 @Transactional
 public interface ICustomerRepository extends JpaRepository<Customer, Integer> {
@@ -31,4 +32,7 @@ public interface ICustomerRepository extends JpaRepository<Customer, Integer> {
 
     @Query(value = "select * from customer where id = :id", nativeQuery = true)
     Customer findById(@Param("id") int id);
+
+    Page<Customer> findAllByNameContaining(String name, Pageable pageable);
+
 }

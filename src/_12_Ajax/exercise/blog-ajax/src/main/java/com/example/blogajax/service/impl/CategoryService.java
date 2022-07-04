@@ -33,8 +33,4 @@ public class CategoryService implements ICategoryService {
         iCategoryRepository.update(type, id);
     }
 
-    @Override
-    public void delete(int id) {
-        iCategoryRepository.delete(id);
-    }
 }

@@ -36,7 +36,7 @@ public class BlogController {
     private ResponseEntity<?> showListBlog(@RequestParam(name = "page", defaultValue = "0") int page, @PathVariable("size") int size) {
         Sort sort = Sort.by("title").ascending();
         Page<Blog> list = iBlogService.findAll(PageRequest.of(page, size, sort));
-//        List<NewDTO> list1
         return new ResponseEntity<>(list.getContent(), HttpStatus.OK);
     }
+
 }

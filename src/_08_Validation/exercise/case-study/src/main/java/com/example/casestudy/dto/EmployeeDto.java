@@ -5,14 +5,23 @@ import com.example.casestudy.model.employee.Division;
 import com.example.casestudy.model.employee.Position;
 import com.example.casestudy.model.employee.User;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Pattern;
+
 public class EmployeeDto {
     private int id;
+    @NotEmpty(message = "Name mustn't empty")
     private String name;
     private String birthday;
+    @Pattern(regexp = "^[0-9]{12}|[0-9]{9}", message = "ID card not ok! Please retry. Id must have 9 or 12 number")
     private String cardId;
     private double salary;
+    @Pattern(regexp = "^(090[0-9]{7})|(091[0-9]{7})|((84)+90[0-9]{7})|((84)+91[0-9]{7})$", message = "Phone incorrect! please retry. Ex:090xxxxxxx or 091xxxxxxx(x is number 0-9)")
     private String phone;
+    @Pattern(regexp = "^[A-Za-z0-9]+@([a-z]+\\.)+[a-z]{2,4}$", message = "Email is wrong! please retry. Ex:abc@gmail.com")
     private String email;
+    @NotBlank(message = "Can't be empty")
     private String address;
     private Degree degree;
     private Division division;

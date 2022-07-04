@@ -10,25 +10,25 @@ public class Degree {
     private int id;
     private String name;
 
-    @OneToMany(mappedBy = "degree")
-    private Set<Employee> employeeSet;
+//    @OneToMany(mappedBy = "degree")
+//    private Set<Employee> employeeSet;
 
     public Degree() {
     }
 
-    public Degree(int id, String name, Set<Employee> employeeSet) {
-        this.id = id;
-        this.name = name;
-        this.employeeSet = employeeSet;
-    }
-
-    public Set<Employee> getEmployeeSet() {
-        return employeeSet;
-    }
-
-    public void setEmployeeSet(Set<Employee> employeeSet) {
-        this.employeeSet = employeeSet;
-    }
+//    public Degree(int id, String name, Set<Employee> employeeSet) {
+//        this.id = id;
+//        this.name = name;
+//        this.employeeSet = employeeSet;
+//    }
+//
+//    public Set<Employee> getEmployeeSet() {
+//        return employeeSet;
+//    }
+//
+//    public void setEmployeeSet(Set<Employee> employeeSet) {
+//        this.employeeSet = employeeSet;
+//    }
 
     public int getId() {
         return id;

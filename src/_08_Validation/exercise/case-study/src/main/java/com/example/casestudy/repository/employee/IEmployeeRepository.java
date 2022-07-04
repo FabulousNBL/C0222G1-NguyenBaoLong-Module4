@@ -9,6 +9,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import javax.transaction.Transactional;
+import java.util.List;
 
 @Transactional
 public interface IEmployeeRepository extends JpaRepository<Employee, Integer> {
@@ -35,4 +36,7 @@ public interface IEmployeeRepository extends JpaRepository<Employee, Integer> {
     @Query(value = "select * from employee  where id = :id and status =0", nativeQuery= true)
     Employee findById(@Param("id") int id);
 
+
+    @Query(value = "select  * from employee where name like %:name%", nativeQuery =true)
+    Page<Employee> findByName(@Param("name") String name, Pageable pageable);
 }

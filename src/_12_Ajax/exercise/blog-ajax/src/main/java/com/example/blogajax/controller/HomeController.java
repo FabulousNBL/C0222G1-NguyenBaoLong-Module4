@@ -164,4 +164,10 @@ public class HomeController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+
+    @GetMapping("/login")
+    public String login(){
+        return "redirect:/list-blog";
+    }
+
 }

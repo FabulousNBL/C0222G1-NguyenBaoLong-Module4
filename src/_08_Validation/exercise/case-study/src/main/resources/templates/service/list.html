@@ -24,19 +24,6 @@
             <table class="table table-warning table-striped" border="1">
                 <thead>
                 <tr>
-<!--                    this.id = id;-->
-<!--                    this.name = name;-->
-<!--                    this.area = area;-->
-<!--                    this.cost = cost;-->
-<!--                    this.amountCustomer = amountCustomer;-->
-<!--                    this.standardRoom = standardRoom;-->
-<!--                    this.description = description;-->
-<!--                    this.poolArea = poolArea;-->
-<!--                    this.floor = floor;-->
-<!--                    this.rentType = rentType;-->
-<!--                    this.serviceType = serviceType;-->
-<!--                    this.contract = contract;-->
-
                     <th>Service's name</th>
                     <th>Service's area</th>
                     <th>Rent cost</th>
@@ -53,7 +40,6 @@
                 </thead>
                 <tbody>
                 <tr th:each="service, rowStat : ${serviceList}">
-
                     <td th:text="${service.name}"></td>
                     <td th:text="${service.area}"></td>
                     <td th:text="${service.cost}"></td>
@@ -73,10 +59,7 @@
                     <td><a class="btn btn-primary mb-2" role="button"
                            th:href="@{/service/edit/{id}(id=${service.getId()})}">Edit</a></td>
                     <td>
-                        <!--                        <button onclick="onDelete('${customer.getId()}', '${customer.getNameEmployee()}')" type="button"-->
-                        <!--                                class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delModal">-->
-                        <!--                            Delete-->
-                        <!--                        </button>-->
+
                         <a class="btn btn-primary mb-2" role="button"
                            th:href="@{/service/delete/{id}(id=${service.getId()})}">Delete</a>
                     </td>
@@ -108,28 +91,7 @@
                 <div th:replace="~{/footer_header/footer::footer}"></div>
             </div>
         </div>
-        <div class="modal fade" id="delModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Delete customer</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <form action="/customer/delete" method="post">
-                        <input type="hidden" name="id" value="" id="idEmployee">
-                        <div class="modal-body">
-                            Bạn muốn xóa <input style="border: none; outline: none; color: red"  id="idEmployeeName" readonly>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-primary" id="delete">Delete</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+
     </div>
 </div>
 </body>
@@ -143,27 +105,5 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
         integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
         crossorigin="anonymous"></script>
-<script>
-    $(document).ready(function () {
-        //sư kiện nào thực hiện Ajax
-        $('.deleteEmployee').click(function (event) {
-            //lay du lieu
-            let a = $(this);
-            let smartphoneId = a.attr("href");
-            // goi ajax
-            $.ajax({
-                type: "post",
-                //tên API
-                url: `/employee/${smartphoneId}`,
-                //xử lý khi thành công
-                success: function (data) {
-                    a.parent().parent().remove();
-                }
 
-            });
-            //chặn sự kiện mặc định của thẻ
-            event.preventDefault();
-        });
-    })
-</script>
 </html>
