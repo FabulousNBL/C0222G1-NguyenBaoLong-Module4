@@ -1,10 +1,9 @@
-package com.example.blogajax.service.impl;
+package com.codegym.demo.service.impl;
 
-
-import com.example.blogajax.model.AppUser;
-import com.example.blogajax.model.UserRole;
-import com.example.blogajax.repository.AppUserRepository;
-import com.example.blogajax.repository.UserRoleRepository;
+import com.codegym.demo.model.AppUser;
+import com.codegym.demo.model.UserRole;
+import com.codegym.demo.repository.AppUserRepository;
+import com.codegym.demo.repository.UserRoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

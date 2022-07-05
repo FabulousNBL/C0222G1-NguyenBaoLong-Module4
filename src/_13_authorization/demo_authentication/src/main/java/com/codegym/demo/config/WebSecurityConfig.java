@@ -1,7 +1,6 @@
-package com.example.blogajax.config;
+package com.codegym.demo.config;
 
-
-import com.example.blogajax.service.impl.UserDetailsServiceImpl;
+import com.codegym.demo.service.impl.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -35,12 +34,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests().antMatchers("/", "/login", "/logout").permitAll();
 
         http.authorizeRequests()
-                .antMatchers("/list-blog")
+                .antMatchers("/userInfo","student/list")
                 .access("hasAnyRole('ROLE_MEMBER', 'ROLE_ADMIN')");
 
         http.authorizeRequests()
-                .antMatchers("/create")
+                .antMatchers("/admin")
                 .access("hasRole('ROLE_ADMIN')");
+
+        http.authorizeRequests()
+                .antMatchers("/student/list")
+                .access("hasRole('ROLE_GUEST')");
 
         http.authorizeRequests().and().exceptionHandling().accessDeniedPage("/403");
 
@@ -49,7 +52,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 // Submit URL của trang login
 //                .loginProcessingUrl("/j_spring_security") // Submit URL
 //                .loginPage("/login")//
-                .defaultSuccessUrl("/list-blog")// đăng nhập thành công -> call 1 request /userInfo
+                .defaultSuccessUrl("/userInfo")// đăng nhập thành công -> call 1 request /userInfo
                 .failureUrl("/login?error=true")// đăng nhập thất bại -> /login?error = true
 //                .usernameParameter("username")
 //                .passwordParameter("password")
