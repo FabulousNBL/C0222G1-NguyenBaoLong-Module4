@@ -78,19 +78,17 @@ public class CustomerController {
     }
 
     @GetMapping("/delete/{id}")
-    public String delete (@PathVariable("id") int id, Model model){
-        model.addAttribute("customer",customerService.findById(id));
-        return "/customer/delete";
+    public String delete (@PathVariable("id") int id,
+                          @PageableDefault(value = 2) Pageable pageable,
+                          Model model){
+        Customer customer =customerService.findById(id);
+        customer.setStatus(1);
+        customerService.save(customer);
+        model.addAttribute("customerList", customerService.findAllCustomer(pageable));
+        return "/customer/list";
     }
 
-    @PostMapping("/delete")
-    public String remove(Customer customer){
-        Customer customerDelete = customerService.findById(customer.getId());
-        customerDelete.setStatus(1);
-        customerService.save(customerDelete);
 
-        return "redirect:/customer/list";
-    }
 
     @GetMapping("/search")
     public String search(@PageableDefault( value = 2) Pageable pageable, Model model, String name){

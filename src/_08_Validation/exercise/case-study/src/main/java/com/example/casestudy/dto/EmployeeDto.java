@@ -23,12 +23,33 @@ public class EmployeeDto {
     private String email;
     @NotBlank(message = "Can't be empty")
     private String address;
-    private Degree degree;
-    private Division division;
-    private Position position;
+    private int degreeId;
+    private int divisionId;
+    private int positionId;
+    private String userName;
+    private String password;
     private User user;
+    private int status = 0;
 
     public EmployeeDto() {
+    }
+
+    public EmployeeDto(int id, @NotEmpty(message = "Name mustn't empty") String name, String birthday, @Pattern(regexp = "^[0-9]{12}|[0-9]{9}", message = "ID card not ok! Please retry. Id must have 9 or 12 number") String cardId, double salary, @Pattern(regexp = "^(090[0-9]{7})|(091[0-9]{7})|((84)+90[0-9]{7})|((84)+91[0-9]{7})$", message = "Phone incorrect! please retry. Ex:090xxxxxxx or 091xxxxxxx(x is number 0-9)") String phone, @Pattern(regexp = "^[A-Za-z0-9]+@([a-z]+\\.)+[a-z]{2,4}$", message = "Email is wrong! please retry. Ex:abc@gmail.com") String email, @NotBlank(message = "Can't be empty") String address, int degreeId, int divisionId, int positionId, String userName, String password, User user, int status) {
+        this.id = id;
+        this.name = name;
+        this.birthday = birthday;
+        this.cardId = cardId;
+        this.salary = salary;
+        this.phone = phone;
+        this.email = email;
+        this.address = address;
+        this.degreeId = degreeId;
+        this.divisionId = divisionId;
+        this.positionId = positionId;
+        this.userName = userName;
+        this.password = password;
+        this.user = user;
+        this.status = status;
     }
 
     public int getId() {
@@ -95,28 +116,36 @@ public class EmployeeDto {
         this.address = address;
     }
 
-    public Degree getDegree() {
-        return degree;
+    public int getDegreeId() {
+        return degreeId;
     }
 
-    public void setDegree(Degree degree) {
-        this.degree = degree;
+    public void setDegreeId(int degreeId) {
+        this.degreeId = degreeId;
     }
 
-    public Division getDivision() {
-        return division;
+    public int getDivisionId() {
+        return divisionId;
     }
 
-    public void setDivision(Division division) {
-        this.division = division;
+    public void setDivisionId(int divisionId) {
+        this.divisionId = divisionId;
     }
 
-    public Position getPosition() {
-        return position;
+    public int getPositionId() {
+        return positionId;
     }
 
-    public void setPosition(Position position) {
-        this.position = position;
+    public void setPositionId(int positionId) {
+        this.positionId = positionId;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public User getUser() {
@@ -125,5 +154,21 @@ public class EmployeeDto {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

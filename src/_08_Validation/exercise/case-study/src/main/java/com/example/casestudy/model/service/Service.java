@@ -1,8 +1,11 @@
 package com.example.casestudy.model.service;
 
 import com.example.casestudy.model.contract.Contract;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Service {
@@ -18,6 +21,8 @@ public class Service {
     private String description;
     private int poolArea;
     private int floor;
+    @ColumnDefault("0")
+    private int status;
 
     @ManyToOne
     @JoinColumn(name = "rent_type_id", referencedColumnName = "id")
@@ -27,13 +32,14 @@ public class Service {
     @JoinColumn(name = "service_type_id", referencedColumnName = "id")
     private ServiceType serviceType;
 
-    @OneToOne(mappedBy = "service")
-    private Contract contract;
+    @OneToMany(mappedBy = "service")
+    @JsonBackReference("service")
+    private Set<Contract> contract;
 
     public Service() {
     }
 
-    public Service(int id, String name, int area, double cost, int amountCustomer, String standardRoom, String description, int poolArea, int floor, RentType rentType, ServiceType serviceType, Contract contract) {
+    public Service(int id, String name, int area, double cost, int amountCustomer, String standardRoom, String description, int poolArea, int floor, int status, RentType rentType, ServiceType serviceType, Set<Contract> contract) {
         this.id = id;
         this.name = name;
         this.area = area;
@@ -43,6 +49,7 @@ public class Service {
         this.description = description;
         this.poolArea = poolArea;
         this.floor = floor;
+        this.status = status;
         this.rentType = rentType;
         this.serviceType = serviceType;
         this.contract = contract;
@@ -136,11 +143,19 @@ public class Service {
         this.serviceType = serviceType;
     }
 
-    public Contract getContract() {
+    public Set<Contract> getContract() {
         return contract;
     }
 
-    public void setContract(Contract contract) {
+    public void setContract(Set<Contract> contract) {
         this.contract = contract;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
     }
 }

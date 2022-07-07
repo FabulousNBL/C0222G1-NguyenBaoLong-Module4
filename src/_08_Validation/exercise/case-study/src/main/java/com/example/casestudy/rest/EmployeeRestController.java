@@ -34,7 +34,7 @@ public class EmployeeRestController {
 //    }
     public ResponseEntity<List<Employee>> getAll(@RequestParam(name = "page", defaultValue = "0") int page ){
 
-        return new ResponseEntity<>(iEmployeeService.findAllEmployee(PageRequest.of(page,5)).getContent(),HttpStatus.OK);
+        return new ResponseEntity<>(iEmployeeService.findAllEmployee(PageRequest.of(page,2)).getContent(),HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
@@ -47,20 +47,28 @@ public class EmployeeRestController {
         return new ResponseEntity<>(employee, HttpStatus.OK);
     }
 
-    @PutMapping("/remove/{id}")
-    public ResponseEntity<?> delete(@PathVariable ("id") int id, @PageableDefault( value = 2) Pageable pageable){
+    @GetMapping("/remove/{id}")
+    public ResponseEntity<?> delete(@PathVariable ("id") int id,@RequestParam(name = "page", defaultValue = "0") int page){
         Employee temp = iEmployeeService.findById(id);
         temp.setStatus(1);
         iEmployeeService.create(temp);
-        return new ResponseEntity<>(iEmployeeService.findAllEmployee(pageable).getContent(),HttpStatus.OK);
+        List<Employee> employees = iEmployeeService.findAllEmployee(PageRequest.of(page,2)).getContent();
+        return new ResponseEntity<>(employees,HttpStatus.OK);
     }
 
     @PostMapping("")
-    public ResponseEntity<?> addNew(@RequestBody Employee employee, Pageable pageable){
+    public ResponseEntity<?> addNew(@RequestBody Employee employee, @RequestParam(name = "page", defaultValue = "0") int page){
         userService.create(employee.getUser());
         iEmployeeService.create(employee);
-        List<Employee> employees = iEmployeeService.findAllEmployee(pageable).getContent();
+        List<Employee> employees = iEmployeeService.findAllEmployee(PageRequest.of(page,2)).getContent();
         return new ResponseEntity<>(employees,HttpStatus.CREATED);
+    }
+
+    @PutMapping("/edit")
+    public ResponseEntity<List<Employee>> edit(@RequestParam(value = "page", defaultValue = "0") int page, @RequestBody Employee employee){
+        iEmployeeService.create(employee);
+        List<Employee> employees = iEmployeeService.findAllEmployee(PageRequest.of(page,2)).getContent();
+        return new ResponseEntity<>(employees,HttpStatus.OK);
     }
 
 

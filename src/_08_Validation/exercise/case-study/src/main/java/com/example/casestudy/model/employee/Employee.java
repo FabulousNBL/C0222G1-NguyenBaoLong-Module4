@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity(name = "employee")
 public class Employee {
@@ -23,29 +24,27 @@ public class Employee {
 
     @ManyToOne
     @JoinColumn(name = "degree_id", referencedColumnName = "id")
-    @JsonBackReference(value = "degree_id")
     private Degree degree;
 
     @ManyToOne
     @JoinColumn(name = "division_id", referencedColumnName = "id")
-    @JsonBackReference(value = "division_id")
     private Division division;
 
     @ManyToOne
     @JoinColumn(name = "position_id", referencedColumnName = "id")
-    @JsonBackReference(value = "position_id")
     private Position position;
 
     @OneToOne
     @JoinColumn(name = "user_name", referencedColumnName = "userName")
-    @JsonBackReference(value = "user_name")
+//    @JsonBackReference(value = "user_name")
     private User user;
 
     public Employee() {
     }
 
-    @OneToOne(mappedBy = "employee")
-    private Contract contract;
+    @OneToMany(mappedBy = "employee")
+    @JsonBackReference(value = "employee")
+    private Set<Contract> contract;
 
 
 
@@ -146,11 +145,11 @@ public class Employee {
         this.user = user;
     }
 
-    public Contract getContract() {
+    public Set<Contract> getContract() {
         return contract;
     }
 
-    public void setContract(Contract contract) {
+    public void setContract(Set<Contract> contract) {
         this.contract = contract;
     }
 

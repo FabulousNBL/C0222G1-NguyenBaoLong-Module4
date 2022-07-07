@@ -8,4 +8,8 @@ public interface IService {
     Page<Service> findAllService(Pageable pageable);
 
     void create(Service service);
+
+    Service findById(int id);
+
+//    void delete(int id);
 }

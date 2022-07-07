@@ -9,11 +9,11 @@ public class ContractDetail {
     private int id;
     private int quantity;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "attach_service_id", referencedColumnName = "id")
     private AttachService attachService;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "contract_id", referencedColumnName = "id")
     private Contract contract;
 

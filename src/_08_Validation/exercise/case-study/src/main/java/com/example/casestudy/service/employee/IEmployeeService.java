@@ -1,5 +1,6 @@
 package com.example.casestudy.service.employee;
 
+import com.example.casestudy.dto.EmployeeDto;
 import com.example.casestudy.model.employee.Employee;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -15,4 +16,5 @@ public interface IEmployeeService {
     Employee findById(int id);
 
     Page<Employee> findByName( String name, Pageable pageable);
+
 }

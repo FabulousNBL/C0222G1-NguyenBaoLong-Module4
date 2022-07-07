@@ -1,6 +1,7 @@
 package com.example.casestudy.model.customer;
 
 import com.example.casestudy.model.contract.Contract;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.validator.constraints.UniqueElements;
 
@@ -30,6 +31,7 @@ public class Customer {
     private CustomerType customerType;
 
     @OneToMany(mappedBy = "customer")
+    @JsonBackReference("customer")
     private Set<Contract> contract;
 
     public Customer() {

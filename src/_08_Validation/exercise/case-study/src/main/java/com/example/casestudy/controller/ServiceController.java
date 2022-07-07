@@ -14,10 +14,7 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
@@ -41,8 +38,9 @@ public class ServiceController {
         return "/service/list";
     }
 
-    @GetMapping("/create")
-    public String create(Model model){
+    @GetMapping("/create/{name}")
+    public String create(@PathVariable("name") String name, Model model){
+        model.addAttribute("name",name);
         model.addAttribute("rentTypeList",rentTypeService.findAll());
         model.addAttribute("typeServiceList", iTypeService.findAll());
         model.addAttribute("service", new ServiceDto());
@@ -64,5 +62,39 @@ public class ServiceController {
         iService.create(service);
         redirectAttributes.addFlashAttribute("msg", " Add new service successful");
         return "redirect:/service/list";
+    }
+
+    @GetMapping("/edit/{id}")
+    public String edit(@PathVariable("id") int id, Model model){
+        model.addAttribute("service", iService.findById(id));
+        model.addAttribute("rentTypeList", rentTypeService.findAll());
+        model.addAttribute("typeServiceList", iTypeService.findAll());
+        return "/service/edit";
+    }
+
+    @PostMapping("/edit")
+    public String update(@Valid @ModelAttribute("service") ServiceDto serviceDto,BindingResult bindingResult, Model model){
+        if (bindingResult.hasErrors()){
+            model.addAttribute("rentTypeList", rentTypeService.findAll());
+            model.addAttribute("typeServiceList", iTypeService.findAll());
+            return "/service/edit";
+        }
+
+        Service service = new Service();
+        BeanUtils.copyProperties(serviceDto,service);
+
+        iService.create(service);
+        return "redirect:/service/list";
+    }
+
+    @GetMapping("/delete/{id}")
+    public String delete(@PathVariable("id") int id){
+
+        Service service = iService.findById(id);
+        service.setStatus(1);
+
+        iService.create(service);
+        return "redirect:/service/list";
+
     }
 }

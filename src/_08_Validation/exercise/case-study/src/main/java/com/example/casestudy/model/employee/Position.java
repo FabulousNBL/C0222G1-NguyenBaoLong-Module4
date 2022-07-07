@@ -1,5 +1,7 @@
 package com.example.casestudy.model.employee;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import java.util.Set;
 
@@ -10,25 +12,26 @@ public class Position {
     private int id;
     private String name;
 
-//    @OneToMany(mappedBy = "position")
-//    private Set<Employee> employees;
-//
-//    public Position(int id, String name, Set<Employee> employees) {
-//        this.id = id;
-//        this.name = name;
-//        this.employees = employees;
-//    }
+    @OneToMany(mappedBy = "position")
+    @JsonBackReference
+    private Set<Employee> employees;
 
-//    public Set<Employee> getEmployees() {
-//        return employees;
-//    }
-//
-//    public void setEmployees(Set<Employee> employees) {
-//        this.employees = employees;
-//    }
-//
-//    public Position() {
-//    }
+    public Position(int id, String name, Set<Employee> employees) {
+        this.id = id;
+        this.name = name;
+        this.employees = employees;
+    }
+
+    public Set<Employee> getEmployees() {
+        return employees;
+    }
+
+    public void setEmployees(Set<Employee> employees) {
+        this.employees = employees;
+    }
+
+    public Position() {
+    }
 
     public int getId() {
         return id;

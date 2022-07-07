@@ -21,4 +21,9 @@ public class Service implements IService {
         iServiceRepository.save(service);
     }
 
+    @Override
+    public com.example.casestudy.model.service.Service findById(int id) {
+        return iServiceRepository.findById(id);
+    }
+
 }

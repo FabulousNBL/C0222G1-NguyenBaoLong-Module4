@@ -3,9 +3,11 @@ package com.example.casestudy.model.contract;
 import com.example.casestudy.model.customer.Customer;
 import com.example.casestudy.model.employee.Employee;
 import com.example.casestudy.model.service.Service;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Contract {
@@ -17,7 +19,7 @@ public class Contract {
     private double deposit;
     private double total;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "employee_id", referencedColumnName = "id")
     private Employee employee;
 
@@ -25,14 +27,15 @@ public class Contract {
     @JoinColumn(name = "customer_id", referencedColumnName = "id")
     private Customer customer;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "service_id", referencedColumnName = "id")
     private Service service;
 
-    @OneToOne(mappedBy = "contract")
-    private ContractDetail contractDetail;
+    @OneToMany(mappedBy = "contract")
+    @JsonBackReference(value = "detail")
+    private Set<ContractDetail> contractDetail;
 
-    public Contract(int id, String startDay, String endDay, double deposit, double total, Employee employee, Customer customer, Service service, ContractDetail contractDetail) {
+    public Contract(int id, String startDay, String endDay, double deposit, double total, Employee employee, Customer customer, Service service, Set<ContractDetail> contractDetail) {
         this.id = id;
         this.startDay = startDay;
         this.endDay = endDay;
@@ -43,7 +46,6 @@ public class Contract {
         this.service = service;
         this.contractDetail = contractDetail;
     }
-
 
     public Contract() {
     }
@@ -112,11 +114,11 @@ public class Contract {
         this.service = service;
     }
 
-    public ContractDetail getContractDetail() {
+    public Set<ContractDetail> getContractDetail() {
         return contractDetail;
     }
 
-    public void setContractDetail(ContractDetail contractDetail) {
+    public void setContractDetail(Set<ContractDetail> contractDetail) {
         this.contractDetail = contractDetail;
     }
 }

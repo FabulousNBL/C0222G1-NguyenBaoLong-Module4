@@ -44,36 +44,36 @@ public class EmployeeController {
         return "/employee/list";
     }
 
-    @GetMapping("/create")
-    public String create(Model model){
-        model.addAttribute("userList", iUserService.findAll() );
-        model.addAttribute("degreeList", degreeService.findAll());
-        model.addAttribute("divisionList", divisionService.findAll());
-        model.addAttribute("positionList", positionService.findAll());
-        model.addAttribute("employee", new EmployeeDto());
-        return "/employee/create";
-    }
-
-    @PostMapping("/create")
-    public String create(@Valid @ModelAttribute("employee") EmployeeDto employeeDto,
-                         BindingResult bindingResult, RedirectAttributes redirectAttributes, Model model){
-        if (bindingResult.hasErrors()){
-            model.addAttribute("degreeList", degreeService.findAll());
-            model.addAttribute("divisionList", divisionService.findAll());
-            model.addAttribute("positionList", positionService.findAll());
-
-            return "/employee/create";
-        }
-
-        Employee employee= new Employee();
-        BeanUtils.copyProperties(employeeDto, employee);
-
-        iUserService.create(employee.getUser());
-
-        iEmployeeService.create(employee);
-        redirectAttributes.addFlashAttribute("msg", " Add new customer successful");
-        return "redirect:/employee/list";
-    }
+//    @GetMapping("/create")
+//    public String create(Model model){
+//        model.addAttribute("userList", iUserService.findAll() );
+//        model.addAttribute("degreeList", degreeService.findAll());
+//        model.addAttribute("divisionList", divisionService.findAll());
+//        model.addAttribute("positionList", positionService.findAll());
+//        model.addAttribute("employee", new EmployeeDto());
+//        return "/employee/create";
+//    }
+//
+//    @PostMapping("/create")
+//    public String create(@Valid @ModelAttribute("employee") EmployeeDto employeeDto,
+//                         BindingResult bindingResult, RedirectAttributes redirectAttributes, Model model){
+//        if (bindingResult.hasErrors()){
+//            model.addAttribute("degreeList", degreeService.findAll());
+//            model.addAttribute("divisionList", divisionService.findAll());
+//            model.addAttribute("positionList", positionService.findAll());
+//
+//            return "/employee/create";
+//        }
+//
+//        Employee employee= new Employee();
+//        BeanUtils.copyProperties(employeeDto, employee);
+//
+//        iUserService.create(employee.getUser());
+//
+//        iEmployeeService.create(employee);
+//        redirectAttributes.addFlashAttribute("msg", " Add new customer successful");
+//        return "redirect:/employee/list";
+//    }
 
     @GetMapping("/edit/{id}")
     public String update(@PathVariable("id") int id, Model model){

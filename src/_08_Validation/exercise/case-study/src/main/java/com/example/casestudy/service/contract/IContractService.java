@@ -10,4 +10,6 @@ public interface IContractService {
     Page<Contract> findAllContract(Pageable pageable);
 
     void create (Contract contract);
+
+    Contract findById(int id);
 }

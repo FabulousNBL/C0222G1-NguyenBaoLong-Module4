@@ -50,3 +50,35 @@ values
 ("Nguyễn Thị Hào","1999-04-08",0,"965656433","0763212345","haohao99@gmail.com","Kon Tum",3,'KH-0008'),
 ("Trần Đại Danh","1994-07-01",1,"432341235","0643343433","danhhai99@gmail.com","Quảng Ngãi",1,'KH-0009'),
 ("Nguyễn Tâm Đắc","1989-07-01",1,"344343432","0987654321","dactam@gmail.com","Đà Nẵng",2,'KH-0010');
+
+-- delete from attach_service;
+insert into attach_service(id,name,cost,unit,status)
+values
+(1,'Karaoke',10000,'giờ','tiện nghi, hiện tại'),
+(2,'Thuê xe máy',10000,'chiếc','hỏng 1 xe'),
+(3,'Thuê xe đạp',20000,'chiếc','tốt'),
+(4,'Buffet buổi sáng',15000,'suất','đầy đủ đồ ăn, tráng miệng'),
+(5,'Buffet buổi trưa',90000,'suất','đầy đủ đồ ăn, tráng miệng'),
+(6,'Buffet buổi tối',16000,'suất','đầy đủ đồ ăn, tráng miệng');
+
+-- delete from contract
+insert into contract(id,deposit,total,start_day,end_day,employee_id,customer_id,service_id)
+values
+(1,0,200000,'2020-12-08','2020-12-08',3,1,3),
+(2,200000,500000,'2020-07-14','2020-07-21',7,3,1),
+(3,50000,200000,'2021-03-15','2021-03-17',3,4,2),
+(4,100000,300000,'2021-01-14','2021-01-18',7,5,5),
+(5,0,200000,'2021-07-14','2021-07-15',7,2,6),
+(6,0,200000,'2021-06-01','2021-06-03',7,7,6),
+(7,100000,300000,'2021-09-02','2021-09-05',7,4,4),
+(8,150000,450000,'2021-06-17','2021-06-18',3,4,1),
+(9,0,200000,'2020-11-19','2020-11-19',3,4,3),
+(10,0,200000,'2021-04-12','2021-04-14',10,3,5),
+(11,0,200000,'2021-04-25','2021-04-25',2,2,1),
+(12,0,200000,'2021-05-25','2021-05-27',7,10,1); 
+
+
+-- delete from contract_detail;
+insert into contract_detail(id,quantity,contract_id,attach_service_id)
+values (1,5,2,4),(2,8,2,5),(3,15,2,6),(4,1,3,1),
+(5,11,3,2),(6,1,1,3),(7,2,1,2),(8,2,12,2);

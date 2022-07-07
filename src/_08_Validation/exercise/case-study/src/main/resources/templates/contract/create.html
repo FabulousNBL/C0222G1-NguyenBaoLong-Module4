@@ -25,14 +25,6 @@
                 </a>
             </p>
 
-            private int id;
-            private String startDay;
-            private String endDay;
-            private double deposit;
-            private double total;
-            private Employee employee;
-            private Customer customer;
-            private Service service;
             <form action="/contract/create" method="post" th:object="${contract}">
                 <div class="mb-3">
                     <label for="nameCustomer" class="form-label">Start day:</label>
@@ -57,25 +49,25 @@
 
                 <div class="mb-3">
                     <label for="customerType" class="form-label">Employee:</label>
-                    <select class="form-select" th:field="*{employee}" id="customerType" name="customerType">
-                        <option th:each="items : ${employeeList}" th:text="${items.name}"
-                                th:value="${items.id}">
+                    <select class="form-select" th:field="*{employee}" id="customerType" name="employee">
+                        <option th:each="items : ${employeeList}" th:value="${items.id}" th:text="${items.name}"
+                                >
                         </option>
                     </select>
                 </div>
                 <div class="mb-3">
                     <label for="customer" class="form-label">Customer:</label>
-                    <select class="form-select" th:field="*{customer}" id="customer" name="customerType">
-                        <option th:each="items : ${customerList}" th:text="${items.name}"
-                                th:value="${items.id}">
+                    <select class="form-select" th:field="*{customer}" id="customer" name="customer">
+                        <option th:each="items : ${customerList}" th:value="${items.id}" th:text="${items.name}"
+                                >
                         </option>
                     </select>
                 </div>
                 <div class="mb-3">
                     <label for="service" class="form-label">Service:</label>
-                    <select class="form-select" th:field="*{service}" id="service" name="customerType">
-                        <option th:each="items : ${serviceList}" th:text="${items.name}"
-                                th:value="${items.id}">
+                    <select class="form-select" th:field="*{service}" id="service" name="service">
+                        <option th:each="items : ${serviceList}" th:value="${items.id}" th:text="${items.name}"
+                                >
                         </option>
                     </select>
                 </div>
