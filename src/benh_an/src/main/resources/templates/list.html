@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<body>
+<a id="createItem" type="button" class="btn btn-success createEmployee"
+   data-toggle="modal" data-target="#modalCreate">
+    CREATE NEW
+</a>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Mã bệnh án</th>
+        <th>Name</th>
+        <th>Reason</th>
+        <th>Date In</th>
+        <th>Date Out</th>
+        <th>Mã bệnh nhân</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody id="benhan">
+    <tr th:each="b:${benhans}">
+        <td th:text="${b.id}"></td>
+        <td th:text="${b.benhNhan.name}"></td>
+        <td th:text="${b.reason}"></td>
+        <td th:text="${b.datein}"></td>
+        <td th:text="${b.dateout}"></td>
+        <td th:text="${b.benhNhan.id}"></td>
+        <td>
+            <button th:id="${b.id}" type="button" class="btn btn-primary" data-toggle="modal"
+                    data-target="#editModal" onclick="showEditForm(this.id)">
+                Edit
+            </button>
+        </td>
+        <td>
+            <button th:id="${b.id}" type="button" class="btn btn-primary" data-toggle="modal"
+                    data-target="#deleteModal" onclick="showDeleteForm(this.id)">
+                Delete
+            </button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<div class="row">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-3"></div>
+    <div class="col-lg-3"></div>
+    <div class="col-lg-3">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" th:href="@{'/show'(page=${benhans.number - 1})}"
+                       th:if="${benhans.hasPrevious()}" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+
+                <li class="page-item"><a class="page-link" th:text="${benhans.number -1}"
+                                         th:if="${benhans.hasPrevious()}"
+                                         th:href="@{'/show'(page=${benhans.number - 1})}"></a></li>
+                <li class="page-item active"><a class="page-link" th:text="${benhans.number}"
+                                                th:href="@{'/show'(page=${benhans.number})}"></a></li>
+                <li class="page-item"><a class="page-link" th:text="${benhans.number +1}"
+                                         th:if="${benhans.hasNext()}"
+                                         th:href="@{'/show'(page=${benhans.number + 1})}"></a></li>
+
+                <li class="page-item">
+                    <a class="page-link" th:href="@{'/show'(page=${benhans.number + 1})}"
+                       th:if="${benhans.hasNext()}" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<!-- Add Modal -->
+<div class="modal fade" id="modalCreate" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Create form</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="edit-modal">
+                <form method="post">
+                    <div class="form-group">
+                        <label for="reason">Reason</label>
+                        <input type="text" class="form-control" id="reason">
+                        <p style="color: red" id="reasonerr"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="datein">Date In</label>
+                        <input type="date" class="form-control" id="datein">
+                        <p style="color: red" id="dateinerr"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="dateout">Date Out</label>
+                        <input type="date" class="form-control" id="dateout">
+                        <p style="color: red" id="dateouterr"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="benhnhan">Type of customer:</label>
+                        <select id="benhnhan" class="form-control w-25">
+                            <option th:each="b:${benhnhans}" th:text="${b.id}"
+                                    th:value="${b.id}"></option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="addBenhAn()">Create
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Edit Modal -->
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Create form</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="post">
+                    <div class="form-group">
+                        <label for="reason">Reason</label>
+                        <input type="text" class="form-control" id="reasonEdit">
+                    </div>
+                    <div class="form-group">
+                        <label for="datein">Date In</label>
+                        <input type="date" class="form-control" id="dateinEdit">
+                    </div>
+                    <div class="form-group">
+                        <label for="dateout">Date Out</label>
+                        <input type="date" class="form-control" id="dateoutEdit">
+                    </div>
+                    <div class="form-group">
+                        <label for="benhnhan">Mã Bệnh Nhân</label>
+                        <select id="benhnhanEdit" class="form-control w-25">
+                            <option th:each="b:${benhnhans}" th:text="${b.id}"
+                                    th:value="${b.id}"></option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button data-dismiss="modal" type="button" class="btn btn-primary" onclick="addBenhAn()">Create
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Delete Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Delete confirmation form</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="delete-modal-body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                <button data-dismiss="modal" id="delete-benhan" type="button" class="btn btn-primary">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+    function addBenhAn() {
+        let reason = $('#reason').val();
+        let dateIn = $('#datein').val();
+        let dateOut = $('#dateout').val();
+        let benhNhan = $('#benhnhan').val();
+        let benhAn = {
+            reason: reason,
+            datein: dateIn,
+            dateout: dateOut,
+            benhNhan: {
+                id: benhNhan
+            }
+        }
+        debugger
+        $.ajax({
+            headers: {
+                'Accept': 'application/json',
+                'Content-type': 'application/json'
+            },
+            type: "POST",
+            data: JSON.stringify(benhAn),
+            url: "/rest",
+            success: successHandler,
+            error: function (msg) {
+                console.log(msg)
+                document.getElementById("reasonerr").innerText = msg.responseJSON.reason;
+                document.getElementById("dateinerr").innerText = msg.responseJSON.datein;
+                document.getElementById("dateouterr").innerText = msg.responseJSON.dateout;
+            }
+        });
+        event.preventDefault();
+    }
+
+    function successHandler() {
+        $.ajax({
+            type: "GET",
+            url: "/rest",
+            success: function (data) {
+                let content = '';
+                for (let i = 0; i < data.length; i++) {
+                    content += getBenhAn(data[i]);
+                }
+                // document.getElementById('benhan').innerHTML = content
+                $("#modalCreate").modal('hide');
+            }
+        })
+    }
+
+    function getBenhAn(data) {
+        return `<tr>
+                    <td>${data.reason}</td>
+                    <td>${data.datein}</td>
+                    <td>${data.dateout}</td>
+                    <td>${data.benhNhan.id}</td>
+                 </tr>`
+    }
+
+    function showEditForm(id) {
+        $.ajax({
+            type: "GET",
+            url: `/rest/${id}`,
+            success: function (data) {
+                console.log(data);
+                document.getElementById("reasonEdit").value = data.reason;
+                document.getElementById("dateinEdit").value = data.datein;
+                document.getElementById("dateoutEdit").value = data.dateout;
+                document.getElementById("benhnhanEdit").value = data.benhNhan.id;
+            }
+        })
+    }
+
+    $('#delete-benhan').click(function (event) {
+        let deleteId = document.getElementById("delete-id").value;
+        $.ajax({
+            type: "DELETE",
+            url: `/rest/${deleteId}`,
+            success: successHandler()
+        })
+    })
+
+    function showDeleteForm(id) {
+        let container = `<input type="hidden" readonly value="${id}" id="delete-id"
+                          <p>Do you want to delete "${id}" ?</p>`
+        document.getElementById("delete-modal-body").innerHTML = container;
+    }
+
+</script>
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+</body>
+</html>
